@@ -1,0 +1,163 @@
+<!--DONE-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="img/x-icon" href="./assets/img/favicon.ico">
+    <title>LMS Project</title>
+    <link rel="stylesheet" href="./assets/css/login.css">
+    <link rel="stylesheet" href="./assets/font/fontawesome-free-6.5.1-web/css/all.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="decoration">
+            <h1 class="decoration__heading">Trang đăng nhập</h1>
+            <img class="decoration__img" src="./assets/img/login/login.svg">
+        </div>
+        <div class="login">
+            <div class="login__option">
+                <div class="option-logo">
+                    <img class="login__logo" src="./assets/img/HCMUT_official_logo.png">
+                    <a href="./index.html">HCMUT</a>
+                </div>
+                <h3 style="margin-top: 40px; text-align: center; line-height: 30px;">
+                    Trường Đại học Bách khoa - Đại học Quốc gia TP.HCM <br>
+                    Trường đào tạo kỹ thuật hàng đầu Việt Nam
+                </h3>
+                <div class="login-btn">
+                    <div onclick="switchToLogin('.goToTeacher')"
+                    class="login-teacher">
+                        <h3 class="login-note">Đăng nhập cho giảng viên</h3>
+                    </div>
+                    <div onclick="switchToLogin('.goToStudent')"
+                    class="login-student">
+                        <h3 class="login-note">Đăng nhập cho sinh viên</h3>
+                    </div>
+                </div>
+                <p style="font-size: 13px;margin-top: 30px;">
+                    Bằng cách chọn Đăng nhập, bạn xác nhận việc đã đọc và đồng ý với 
+                    <a href="https://bka.hcmut.edu.vn/portal-privacy" style="text-decoration: none;">Điều kiện & Điều khoản giao dịch cùng Chính sách bảo mật thông tin</a> tại bka.hcmut.edu.vn
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div style="display: none;">
+        <div class="backToOption">
+            <div class="login__option">
+                <div class="option-logo">
+                    <img class="login__logo" src="./assets/img/HCMUT_official_logo.png">
+                    <a href="./index.html">HCMUT</a>
+                </div>
+                <h3 style="margin-top: 40px; text-align: center; line-height: 30px;">
+                    Trường đại học Bách Khoa - Đại học quốc gia TP.HCM <br>
+                    Trường đào tạo kỹ thuật hàng đầu Việt Nam
+                </h3>
+                <div class="login-btn">
+                    <div onclick="switchToLogin('.goToTeacher')"
+                    class="login-teacher">
+                        <h3 class="login-note">Đăng nhập cho giảng viên</h3>
+                    </div>
+                    <div onclick="switchToLogin('.goToStudent')"
+                    class="login-student">
+                        <h3 class="login-note">Đăng nhập cho sinh viên</h3>
+                    </div>
+                </div>
+                <p style="font-size: 13px;margin-top: 30px;">
+                    Bằng cách chọn Đăng nhập, bạn xác nhận việc đã đọc và đồng ý với 
+                    <a href="https://bka.hcmut.edu.vn/portal-privacy" style="text-decoration: none;">Điều kiện & Điều khoản giao dịch cùng Chính sách bảo mật thông tin</a> tại bka.hcmut.edu.vn
+                </p>
+            </div>
+        </div>
+
+
+
+        <div class="goToStudent">
+            <div class="login__option-student">
+                <h2>
+                    <i onclick="switchToLogin('.backToOption')"
+                    style="margin: 0px 40px 0px 40px;"
+                    class="fa-solid fa-chevron-left"></i>
+                    Đăng nhập cho sinh viên
+                </h2>
+                <p style="padding: 0px 40px;margin-top: 20px;">Lưu ý: Dùng email trường có đuôi hcmut.edu.vn để đăng nhập</p>
+                <p id="alert-message" style="padding: 0px 40px;margin-top: 10px; color: red;"></p>
+                <p class="input-note" style="font-weight: 700;margin-bottom:-8px">Email:</p>
+                <input class="input-box" id="student-email" type="email" placeholder="Nhập email">
+                <p class="input-note" style="font-weight: 700;margin-bottom:-8px">Mật khẩu:</p>
+                <input class="input-box" id="student-password" type="password" placeholder="Nhập mật khẩu">
+                <div class="login-button" id="student-submit">Đăng nhập</div>
+                <h3 onclick="switchToLogin('.signUpStudent')" class="forgotPassword">Đăng ký tài khoản sinh viên</h3>
+            </div>
+        </div>
+
+
+        <div class="goToTeacher">
+            <div class="login__option-teacher">
+                <h2>
+                    <i onclick="switchToLogin('.backToOption')"
+                    style="margin: 0px 50px 0px 40px;"
+                    class="fa-solid fa-chevron-left"></i>
+                    Đăng nhập cho giảng viên
+                </h2>
+                <p style="padding: 0px 40px;margin-top: 20px;">Lưu ý: Dùng email trường có đuôi hcmut.edu.vn để đăng nhập</p>
+                <p id="alert-message" style="padding: 0px 40px;margin-top: 10px; color: red;"></p>
+                <p class="input-note" style="font-weight: 700;margin-bottom:-8px">Email:</p>
+                <input class="input-box" id="teacher-email" type="email" placeholder="Nhập email">
+                <p class="input-note" style="font-weight: 700;margin-bottom:-8px">Mật khẩu:</p>
+                <input class="input-box" id="teacher-password" type="password" placeholder="Nhập mật khẩu">
+                <div class="login-button" id="teacher-submit">Đăng nhập</div>
+                <h3 onclick="switchToLogin('.signUpTeacher')" class="forgotPassword">Đăng ký tài khoản giảng viên</h3>
+            </div>
+        </div>
+
+
+        <!-- Đoạn code trang đăng ký của giáo viên -->
+        <div class="signUpTeacher">
+            <div class="sign_up">
+                <h2>
+                    <i onclick="switchToLogin('.goToTeacher')"
+                    style="margin: 0px 40px 0px 40px;"
+                    class="fa-solid fa-chevron-left"></i>
+                    Đăng ký tài khoản giảng viên
+                </h2>
+                <p id="alert-message" style="padding: 0px 40px;margin-top: 10px; color: red;"></p>
+                <p class="input-note">Email:</p>
+                <input class="input-box" id="teacher-email" type="email" placeholder="Nhập email">
+                <p class="input-note">ID:</p>
+                <input class="input-box" id="teacher-id" type="text" placeholder="Nhập ID">
+                <p class="input-note">Mật khẩu:</p>
+                <input class="input-box" id="teacher-password" type="password" placeholder="Nhập mật khẩu">
+                <div class="login-button" id="teacher-submit">Đăng ký</div>
+            </div>
+        </div>
+
+
+        <!-- Đoạn code trang đăng ký của học sinh -->
+        <div class="signUpStudent">
+            <div class="sign_up">
+                <h2>
+                    <i onclick="switchToLogin('.goToStudent')"
+                    style="margin: 0px 40px 0px 40px;"
+                    class="fa-solid fa-chevron-left"></i>
+                    Đăng ký tài khoản sinh viên
+                </h2>
+                <p id="alert-message" style="padding: 0px 40px;margin-top: 10px; color: red;"></p>
+                <p class="input-note">Email:</p>
+                <input class="input-box" id="student-email" type="email" placeholder="Nhập email">
+                <p class="input-note">ID:</p>
+                <input class="input-box" id="student-id" type="text" placeholder="Nhập ID">
+                <p class="input-note">Nhập mật khẩu:</p>
+                <input class="input-box" id="student-password" type="password" placeholder="Nhập mật khẩu">
+                <div class="login-button" id="student-submit">Đăng ký</div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./assets/js/login.js"></script>
+    
+</body>
+</html>

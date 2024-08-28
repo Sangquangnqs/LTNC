@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="./assets/font/fontawesome-free-6.5.1-web/css/all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="./assets/css/list_stu.css">
+    <!-- <script src="./assets/js/funteach.js"></script> -->
+    <link rel="icon" type="img/x-icon" href="./assets/img/favicon.ico">
+
+    <title>LMS Project</title>
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <div id="nav">
+                <div class="nav__logo">
+                    <a href="#home">
+                        <img src="./assets/img/HCMUT_official_logo.png" alt="">
+                    </a>
+                </div>
+
+                <div class="nav__menu">
+                    <div class="menu-home menu-effect">
+                        <a href="#home">Trang chủ</a>
+                    </div>
+                    <div class="menu-teacher menu-effect teacher-only">
+                        <a href="#teacher">
+                            Thông tin giảng viên
+                            <i class="fa-solid fa-caret-down"></i>
+                        </a>
+                        
+                        <ul class="subnav">
+                            <li><a href="">Thông tin cá nhân</a></li>
+                            <li><a href="">Lịch trình giảng dạy</a></li>
+                            <li><a href="">Danh sách lớp</a></li>
+                        </ul>
+                        <div class="underline"></div>
+                    </div>
+
+                    <div class="menu-courses menu-effect student-only">
+                        <a href="#course">
+                            Khóa học của tôi
+                            <i class="fa-solid fa-caret-down"></i>
+                        </a>
+                        <ul class="subnav">
+                            <li><a href="">Danh sách khóa học</a></li>
+                            <li><a href="">Đăng kí mới</a></li>
+                        </ul>
+                        <div class="underline"></div>
+                    </div>
+                </div>
+
+                <div class="nav__icon">
+                    <div class="noti-icon">
+                        <i class="fa-solid fa-bell"></i>
+                    </div>
+                    <div class="ava-icon">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <i class="arrow-down fa-solid fa-caret-down"></i>  
+                        <ul class="subnav">
+                            <li><a id="login" href="./login.html"></a></li>
+                            <li><a id="logout"></a></li>
+                            <li><a id="change-password" href="#"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        
+        <div id="content">
+            
+            <div id="content">
+                <div class="grid wide">
+                    <div class="row">
+                        <div class="content__title col l-12" id ="name-Course">
+                        </div>
+                    </div>
+                </div>
+                <div class="grid wide">
+                    <div class="row">
+                        <div class="content__map col l-o-2 l-2">
+                            <a href="./course-detail.html">Khoá học</a>
+                        </div>
+                        <div class="content__map col l-o-1 l-2 student-onlyz">
+                            <a href="./course-score.html">Điểm số - Tiến độ</a>
+                        </div>
+                        <div class="classlist-on content__map col l-o-1 l-2">
+                            <a href="./list_stu.html">Danh sách lớp</a>
+                        </div>  
+                    </div>
+                </div>
+            <div class="container">
+                <form class="navbar-form navbar-right" action="/action_page.php">
+                    <!-- <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Tìm kiếm" name="Tìm kiếm" style="border-radius:10px;">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit" style="border-radius:10px; margin-left:10px;"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div> -->
+                </form>
+            </div>
+            
+            <div class="container bo" id="detail-class">
+                <div class="techinf">
+                    <p style="padding-top:10px;"></p>
+                    <p></p>
+                </div>
+                
+            </div>
+        </div>
+ 
+
+    </div>
+
+    <!--footer start-->
+    <footer> 
+        <div class="chan">
+                <div class="cotleft">
+                    <div class="logo-text-container">
+                        <img class="logo" src="./assets/img/HCMUT_official_logo.png" alt="logo" onclick="reloadPage()">
+                        <div class="text">
+                            <p> Đại học quốc gia thành phố Hồ Chí Minh </p>
+                            <p> Trường đại học Bách khoa </p>
+                        </div>
+                    </div>
+                    <div class="icon" style="margin-top:30px;">
+                        <i class="fa-solid fa-mobile-screen" style="margin-top:-10px;"></i>
+                        <p class="inf"><a href="tel: 0838 654 087" class="map">Điện thoại: (02) 838 654 087  ; Số Fax: (02) 838 637 002</a></p>
+                    </div>
+                    <br>
+                    <div class="icon">
+                        <i class="fa-solid fa-envelope" style="margin-top:-10px;"></i>
+                        <p class="inf"><a href="mailto: pdt@hcmut.edu.vn " class="map">Email: pdt@hcmut.edu.vn</a></p>
+                    </div>
+                    <br>
+                    <div class="icon">
+                        <i class="fa-solid fa-map-location-dot" style="margin-top:-10px;"></i>
+                        <p class="inf"><a href="https://maps.app.goo.gl/NM7Kr9vRVhMyhNZP8" class="map">
+                            Địa chỉ: Cơ sở Lý Thường Kiệt: 268 Lý Thường Kiệt, Phường 14, Quận 10, TP. HCM</a></p>
+                    </div>
+                    <div class="icon">
+                        <p class="inf" style="margin-left:80px;"><a href="https://maps.app.goo.gl/JWBADEVHJPFfKAgt7" class="map">
+                            Cơ sở Dĩ An: Khu phố Tân Lập, Phường Đông Hòa, TP. Dĩ An, Tỉnh Bình Dương</a></p>
+                    </div>
+                    <br>
+                    <br>
+                </div>
+    
+                <div class="cotright collg2 colmd4">
+                    <div class="logo-text-container">
+                        <div class="home">
+                            <i class="fa-solid fa-house-chimney-window"></i>
+                        </div>
+                        <div class="tq">
+                            <p><a href="#" class="main">TỔNG QUAN</a></p>
+                        </div>
+                    </div>
+                    <div class="tqchild">
+                        <p><a href="#" class="ctqs">Giới thiệu</a></p>
+                        <p><a href="#" class="ctqs">Liên hệ</a></p>
+                        <p><a href="#" class="ctqs">Điều khoản</a></p>
+                        <p><a href="#" class="ctqs">Bảo mật</a></p>
+                    </div>  
+                </div>
+    
+    
+            <div class="dangnhap collg2 colmd4">
+                <div class="logo-text-container">
+                    <div class="home" style="color:#9966ff;">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <div class="tq">
+                        <p><a href="#" class="main">Đăng nhập</a></p>
+                    </div>
+                </div>
+                <div class="tqchild">
+                    <p><a href="#" class="ctqs">Giảng viên</a></p>
+                    <p><a href="#" class="ctqs">Sinh viên</a></p>
+                    <p><a href="#" class="ctqs">Admin</a></p>
+                    <p><a href="#" class="ctqs">Guest</a></p>
+                </div>
+                
+            </div>
+            <div class="dangnhap collg2 colmd4">
+                <div class="logo-text-container">
+                    <div class="home" style="color:#40bf80;">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <div class="tq">
+                        <p><a href="#" class="main">Chiến lược</a></p>
+                    </div>
+                </div>
+                <div class="tqchild">
+                    <p><a href="#" class="ctqs">Mục tiêu tương lai</a></p>
+                    <p><a href="#" class="ctqs">Dự án dài hạn</a></p>
+                    <p><a href="#" class="ctqs">Hoạt động</a></p>
+                    <p><a href="#" class="ctqs">Feedback</a></p>
+                </div>
+            </div>
+    
+        </div>
+        
+        <div class="copyright">
+                <div class="icon">
+                        <i class="fa-solid fa-copyright"></i>
+                        <p class="te" style="margin-top:10px; font-weight:bold;">2007-2024 BKEL. Hệ thống giáo dục hàng đầu Việt Nam </p>
+                </div>
+                <div class="social a">
+                            <a href="https://www.facebook.com/truongdhbachkhoa/"><i class="fa-brands fa-facebook" style="color: #001c4d;"></i></a>
+                            <a href="https://www.instagram.com/bachkhoa.hcmut/"><i class="fa-brands fa-square-instagram" style="color: #b3059c;"></i></a>
+                            <a href="https://www.youtube.com/@truongdhbachkhoa"><i class="fa-brands fa-youtube" style="color: #c20d00;"></i></a>
+                            <a href="https://www.tiktok.com/tag/hcmut"><i class="fa-brands fa-tiktok" style="color: #131416;"></i></a>
+                            <a href="https://vn.linkedin.com/company/hcmut"><i class="fa-brands fa-linkedin" style="color: #001c4d;"></i></a>
+                </div>   
+        </div>
+    </footer>
+</body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="./assets/font/fontawesome-free-6.5.1-web/css/all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/list_stu.css">
+    <script src="./assets/js/reload.js"></script>
+    <link rel="icon" type="img/x-icon" href="./assets/img/favicon.ico">
+
+    <title>LMS Project</title>
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <div id="nav">
+                <div class="nav__logo">
+                    <a href="./index.html">
+                        <img src="./assets/img/HCMUT_official_logo.png" alt="">
+                    </a>
+                </div>
+
+                <div class="nav__menu">
+                    <div class="menu-home menu-effect">
+                        <a href="./index.html">Trang chủ</a>
+                    </div>
+                    <div class="menu-teacher menu-effect teacher-only">
+                        <a href="./teacher_host.html">
+                            Thông tin giảng viên
+                            <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                        
+                        <ul class="subnav">
+                            <li><a href="./teacher_host.html">Thông tin cá nhân</a></li>
+                            <li><a href="./teacher_lich.html">Lịch trình giảng dạy</a></li>
+                            <li><a href="./teacher_classlist.html">Danh sách lớp</a></li>
+                        </ul>
+                        <div class="underline"></div>
+                    </div>
+                    <div class="menu-student menu-effect student-only">
+                        <a href="./student-info.html">
+                            Thông tin sinh viên
+                            <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                        <ul class="subnav">
+                            <li><a href="./student-info.html">Thông tin cá nhân</a></li>
+                            <li><a href="">Tiến trình học tập</a></li>
+                            <li><a href="">Kết quả đánh giá</a></li>
+                        </ul>
+                        <div class="underline"></div>
+                    </div>
+                    <div class="menu-courses menu-effect student-only">
+                        <a href="./courses.html">
+                            Khóa học của tôi
+                            <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                        <ul class="subnav">
+                            <li><a href="./courses.html">Danh sách khóa học</a></li>
+                            <li><a href="./courses.html">Đăng kí mới</a></li>
+                        </ul>
+                        <div class="underline"></div>
+                    </div>
+                </div>
+
+                <div class="nav__icon">
+                    <div class="noti-icon">
+                        <i class="fa-solid fa-bell"></i>
+                    </div>
+                    <div class="ava-icon">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <i class="arrow-down fa-solid fa-caret-down"></i>  
+                        <ul class="subnav">
+                            <li><a id="login" href="./login.html"></a></li>
+                            <li><a id="logout"></a></li>
+                            <li><a id="change-password" href="#"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./assets/js/auth_cfg.js"></script>
+    <script src="./assets/js/list_stu.js"></script>
+</body>
+</html>

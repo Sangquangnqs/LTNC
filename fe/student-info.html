@@ -1,0 +1,432 @@
+<!--DONE-->
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="img/x-icon" href="./assets/img/favicon.ico">
+    <title>LMS Project</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.32.0/plotly.min.js" integrity="sha512-Aw/O5tGIneAFOqDUyrKBgoMFuUnM8AN+JIYAeG0anjDbCRCeyTY6S41Kvnp07K1pz7HSUNYe/a+a/Ub9raDHXg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/student-info.css">
+    <link rel="stylesheet" href="./assets/font/fontawesome-free-6.5.1-web/css/all.css">
+</head>
+<body>
+    <div class="main">
+        <div id="header">
+            <div id="nav">
+                <div class="nav__logo">
+                    <a href="./index.html">
+                        <img src="./assets/img/HCMUT_official_logo.png" alt="">
+                    </a>
+                </div>
+
+                <div class="nav__menu">
+                    <div class="menu-home menu-effect">
+                        <a href="./index.html">Trang chủ</a>
+                    </div>
+                    <div class="menu-teacher menu-effect teacher-only">
+                        <a href="./teacher-info.html">
+                            Thông tin giảng viên
+                        </a>
+                        
+                        <div class="underline"></div>
+                    </div>
+                    <div class="menu-student menu-effect student-only">
+                        <a href="./student-info.html">
+                            Thông tin sinh viên
+                            <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                        <!-- <ul class="subnav">
+                            <li><a href="./student-info.html">Thông tin cá nhân</a></li>
+                            <li><a href="">Tiến trình học tập</a></li>
+                            <li><a href="">Kết quả đánh giá</a></li>
+                        </ul> -->
+                        <div class="underline"></div>
+                    </div>
+                    <div class="menu-courses menu-effect">
+                        <a href="./courses.html">
+                            Khóa học của tôi
+                            <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                        <ul class="subnav">
+                            <li><a href="./courses.html">Danh sách khóa học</a></li>
+                            <li><a href="./courses.html">Đăng kí mới</a></li>
+                        </ul>
+                        <div class="underline"></div>
+                    </div>
+                </div>
+
+                <div class="nav__icon">
+                    <div class="noti-icon">
+                        <i class="fa-solid fa-bell"></i>
+                    </div>
+                    <div class="ava-icon">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <i class="arrow-down fa-solid fa-caret-down"></i>  
+                        <ul class="subnav">
+                            <li><a id="login" href="./login.html"></a></li>
+                            <li><a id="logout"></a></li>
+                            <li><a id="change-password" href="#"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <div class="option">
+        <div onclick="changeStudentInfo(this,'.student-info')"
+        class="option_detail active">
+            <h4 class="option_detail-info">
+                <i class="fa-regular fa-circle-check main-color" style="margin-right: 10px;"></i>
+                Thông tin sinh viên</h4></div>
+        <div onclick="changeStudentInfo(this,'.progress-info')"
+        class="option_detail">
+            <h4 class="option_detail-info">
+                <i class="fa-regular fa-circle-check" style="margin-right: 10px;"></i>
+                Tiến trình học tập</h4></div>
+        <div onclick="changeStudentInfo(this,'.grade-info')"
+        class="option_detail">
+            <h4 class="option_detail-info">
+                <i class="fa-regular fa-circle-check" style="margin-right: 10px;"></i>
+                Điểm số</h4></div>
+    </div>
+    <div class="detail-info">
+        <div class="student-info">
+            <div class="detail-info-header">
+                <h1 style="padding:30px 60px;">
+                    <i class="fa-solid fa-file-signature"></i>
+                     Thông tin sinh viên
+                </h1>
+            </div>
+            <div class="detail-info-body">
+                <div class="detail-info-item">
+                    <p style="font-weight: bold;">Mã số sinh viên:</p>
+                    <p id="idStudent"></p>
+                </div>
+                <div class="detail-info-item">
+                    <p style="font-weight: bold;">Căn cước công dân:</p>
+                    <p id="personalId"></p>
+                </div>
+                <div class="detail-info-item">
+                    <p style="font-weight: bold;">Họ và tên:</p>
+                    <p id="name"></p>
+                </div>
+                <div class="detail-info-item">
+                    <p style="font-weight: bold;">Số điện thoại:</p>
+                    <p id="phoneNumber"></p>
+                </div>
+                <div class="detail-info-item">
+                    <p style="font-weight: bold;">Ngày tháng năm sinh:</p>
+                    <p id="dob"></p>
+                </div>
+                <div class="detail-info-item">
+                    <p style="font-weight: bold;">Email:</p>
+                    <p id="email"></p>
+                </div>
+                <div class="detail-info-item">
+                    <p style="font-weight: bold;">Giới tính:</p>
+                    <p id="gender"></p>
+                </div>
+                <div class="detail-info-item">
+                    <p style="font-weight: bold;">Hộ khẩu thường trú:</p>
+                    <p id="address"></p>
+                </div>
+                <div class="detail-info-item">
+                    <p style="font-weight: bold;">Nơi sinh:</p>
+                    <p id="country"></p>
+                </div>
+                <div class="detail-info-item">
+                    <p style="font-weight: bold;">Ngành học:</p>
+                    <p id="major"></p>
+                </div>
+            </div>
+            <div class="detail-info-footer">
+                <div onclick="showEditModal()">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    Chỉnh sửa
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    
+    <div style="display: none;">
+        <div class="student-info">
+            <div class="detail-info-header">
+                <h1 style="padding:30px 60px;">
+                    <i class="fa-solid fa-file-signature"></i>
+                    Thông tin sinh viên
+                </h1>
+            </div>
+            <div class="detail-info-body">
+                <div class="detail-info-item">
+                    <p style="font-weight: bold;">Mã số sinh viên:</p>
+                    <p id="idStudent1"></p>
+                </div>
+                <div class="detail-info-item">
+                    <p style="font-weight: bold;">Căn cước công dân:</p>
+                    <p id="personalId1"></p>
+                </div>
+                <div class="detail-info-item">
+                    <p style="font-weight: bold;">Họ và tên:</p>
+                    <p id="name1"></p>
+                </div>
+                <div class="detail-info-item">
+                    <p style="font-weight: bold;">Số điện thoại:</p>
+                    <p id="phoneNumber1"></p>
+                </div>
+                <div class="detail-info-item">
+                    <p style="font-weight: bold;">Ngày tháng năm sinh:</p>
+                    <p id="dob1"></p>
+                </div>
+                <div class="detail-info-item">
+                    <p style="font-weight: bold;">Email:</p>
+                    <p id="email1"></p>
+                </div>
+                <div class="detail-info-item">
+                    <p style="font-weight: bold;">Giới tính:</p>
+                    <p id="gender1"></p>
+                </div>
+                <div class="detail-info-item">
+                    <p style="font-weight: bold;">Hộ khẩu thường trú:</p>
+                    <p id="address1"></p>
+                </div>
+                <div class="detail-info-item">
+                    <p style="font-weight: bold;">Nơi sinh:</p>
+                    <p id="country1"></p>
+                </div>
+                <div class="detail-info-item">
+                    <p style="font-weight: bold;">Ngành học:</p>
+                    <p id="major1"></p>
+                </div>
+            </div>
+            <div class="detail-info-footer">
+                <div onclick="showEditModal()">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    Chỉnh sửa
+                </div>
+            </div>
+        </div>
+
+        <!-- Tiến trình học tập -->
+
+        <div class="progress-info">
+            <div class="detail-info-header">
+                <h1 style="padding:30px 60px;">
+                    <i class="fa-solid fa-chart-line"></i>
+                     Tiến trình học tập
+                </h1>
+            </div>
+            <div class="detail-info-body" id="courseChart">
+            </div>
+        </div>
+        <!-- Điểm số -->
+
+        <div class="grade-info">
+            <div class="detail-info-header">
+                <h1 style="padding:30px 60px;">
+                    <i class="fa-solid fa-square-poll-vertical"></i>
+                     Điểm số
+                </h1>
+            </div>
+            <div style="padding: 0px 40px;height: 80%;" id = "result-info">
+                <div class="info-body-header">
+                    <div class="subject_name">
+                        Tên môn học
+                    </div>
+                    <div class="quiz_score">
+                        Điểm chuyên cần
+                    </div>
+                    <div class="assignment_score">
+                        Điểm bài tập lớn
+                    </div>
+                    <div class="midterm_score">
+                        Điểm giữa kỳ
+                    </div>
+                    <div class="finalterm_score">
+                        Điểm cuối kỳ
+                    </div>
+                    <div class="total_score">
+                        Điểm tổng kết
+                    </div>
+                </div>
+                
+        
+            </div>
+        </div>
+    </div>
+
+
+
+    
+
+
+<!-- Pop-up chỉnh sửa thông tin cá nhân -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <form id="editForm">
+                <div class="editForm__item">
+                    <p style="font-weight: bold;">Căn cước công dân:</p>
+                    <input type="text" id="editCitizenID">
+                </div>
+                <div class="editForm__item">
+                    <p style="font-weight: bold;">Họ và tên:</p>
+                    <input type="text" id="editFullName">
+                </div>
+                <div class="editForm__item">
+                    <p style="font-weight: bold;">Số điện thoại:</p>
+                    <input type="text" id="editPhoneNumber">
+                </div>
+                <div class="editForm__item">
+                    <p style="font-weight: bold;">Ngày tháng năm sinh:</p>
+                    <input type="date" id="editDOB" placeholder="DD/MM/YYYY">
+                </div>
+                <div class="editForm__item">
+                    <p style="font-weight: bold;">Giới tính:</p>
+                    <!--input type="text" id="editGender"!-->
+                    <select class="gender__select" id="editGender">
+                        <option class="gender__item" value="man" selected>Nam</option>
+                        <option class="gender__item" value="woman">Nữ</option>
+                        <option class="gender__item" value="other">Khác</option>
+                    </select>
+                </div>
+                <div class="editForm__item">
+                    <p style="font-weight: bold;">Hộ khẩu thường trú:</p>
+                    <input type="text" id="editPermanentAddress">
+                </div>
+                <div class="editForm__item">
+                    <p style="font-weight: bold;">Nơi sinh:</p>
+                    <input type="text" id="editBirthPlace">
+                </div>
+                <div class="editForm__item">
+                    <p style="font-weight: bold;">Ngành học:</p>
+                    <input type="text" id="editMajor">
+                </div>
+            </form>
+            <button id="saveButton" onclick="saveChanges()">Lưu</button>
+        </div>
+    </div>
+
+
+
+
+
+    
+    
+    <!--footer start-->
+    <footer id="footer"> 
+        <div class="chan">
+                <div class="cotleft">
+                    <div class="logo-text-container">
+                        <img class="logo" src="./assets/img/HCMUT_official_logo.png" alt="logo" onclick="reloadPage()">
+                        <div class="text">
+                            <p> Đại học quốc gia thành phố Hồ Chí Minh </p>
+                            <p> Trường đại học Bách khoa </p>
+                        </div>
+                    </div>
+                    <div class="icon" style="margin-top:30px;">
+                        <i class="fa-solid fa-mobile-screen" style="margin-top:-10px;"></i>
+                        <p class="inf"><a href="tel: 0838 654 087" class="map">Điện thoại: (02) 838 654 087  ; Số Fax: (02) 838 637 002</a></p>
+                    </div>
+                    <br>
+                    <div class="icon">
+                        <i class="fa-solid fa-envelope" style="margin-top:-10px;"></i>
+                        <p class="inf"><a href="mailto: pdt@hcmut.edu.vn " class="map">Email: pdt@hcmut.edu.vn</a></p>
+                    </div>
+                    <br>
+                    <div class="icon">
+                        <i class="fa-solid fa-map-location-dot" style="margin-top:-10px;"></i>
+                        <p class="inf"><a href="https://maps.app.goo.gl/NM7Kr9vRVhMyhNZP8" class="map">
+                            Địa chỉ: Cơ sở Lý Thường Kiệt: 268 Lý Thường Kiệt, Phường 14, Quận 10, TP. HCM</a></p>
+                    </div>
+                    <div class="icon">
+                        <p class="inf" style="margin-left:80px;"><a href="https://maps.app.goo.gl/JWBADEVHJPFfKAgt7" class="map">
+                            Cơ sở Dĩ An: Khu phố Tân Lập, Phường Đông Hòa, TP. Dĩ An, Tỉnh Bình Dương</a></p>
+                    </div>
+                    <br>
+                    <br>
+                </div>
+    
+                <div class="cotright collg2 colmd4">
+                    <div class="logo-text-container">
+                        <div class="home">
+                            <i class="fa-solid fa-house-chimney-window"></i>
+                        </div>
+                        <div class="tq">
+                            <p><a href="#" class="main">TỔNG QUAN</a></p>
+                        </div>
+                    </div>
+                    <div class="tqchild">
+                        <p><a href="https://hcmut.edu.vn/tong-quan" class="ctqs">Giới thiệu</a></p>
+                        <p><a href="https://hcmut.edu.vn/contact" class="ctqs">Liên hệ</a></p>
+                        <p><a href="http://www.aao.hcmut.edu.vn/image/data/quyche/VB%20to%CC%82%CC%89ng%20ho%CC%9B%CC%A3p%20Quy%20%C4%91i%CC%A3nh%20ve%CC%82%CC%80%20ho%CC%A3c%20vu%CC%A3%20va%CC%80%20%C4%91a%CC%80o%20ta%CC%A3o%20(1).pdf" class="ctqs">Điều khoản</a></p>
+                        <p><a href="https://hcmut.edu.vn/library-page" class="ctqs">Thư viện</a></p>
+                    </div>  
+                </div>
+    
+    
+            <div class="dangnhap collg2 colmd4">
+                <div class="logo-text-container">
+                    <div class="home" style="color:#9966ff;">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <div class="tq">
+                        <p><a href="#" class="main">Đăng nhập</a></p>
+                    </div>
+                </div>
+                <div class="tqchild">
+                    <p><a href="./login.html" class="ctqs">Giảng viên</a></p>
+                    <p><a href="./login.html" class="ctqs">Sinh viên</a></p>
+                    <p><a href="./login.html" class="ctqs">Admin</a></p>
+                    <p><a href="./login.html" class="ctqs">Guest</a></p>
+                </div>
+                
+            </div>
+            <div class="dangnhap collg2 colmd4">
+                <div class="logo-text-container">
+                    <div class="home" style="color:#40bf80;">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <div class="tq">
+                        <p><a href="#" class="main">Chiến lược</a></p>
+                    </div>
+                </div>
+                <div class="tqchild">
+                    <p><a href="https://hcmut.edu.vn/gioi-thieu/ke-hoach-chien-luoc" class="ctqs">Mục tiêu tương lai</a></p>
+                    <p><a href="https://hcmut.edu.vn/hoat-dong-doi-moi-sang-tao" class="ctqs">Dự án dài hạn</a></p>
+                    <p><a href="https://hcmut.edu.vn/ba-cong-khai" class="ctqs">Hoạt động</a></p>
+                    <p><a href="mailto: pdt@hcmut.edu.vn" class="ctqs">Feedback</a></p>
+                </div>
+            </div>
+    
+        </div>
+        
+        <div class="copyright">
+                <div class="icon">
+                        <i class="fa-solid fa-copyright"></i>
+                        <p class="te" style="margin-top:10px; font-weight:bold;">2007-2024 BKEL. Hệ thống giáo dục hàng đầu Việt Nam </p>
+                </div>
+                <div class="social a">
+                            <a href="https://www.facebook.com/truongdhbachkhoa/"><i class="fa-brands fa-facebook" style="color: #001c4d;"></i></a>
+                            <a href="https://www.instagram.com/bachkhoa.hcmut/"><i class="fa-brands fa-square-instagram" style="color: #b3059c;"></i></a>
+                            <a href="https://www.youtube.com/@truongdhbachkhoa"><i class="fa-brands fa-youtube" style="color: #c20d00;"></i></a>
+                            <a href="https://www.tiktok.com/tag/hcmut"><i class="fa-brands fa-tiktok" style="color: #131416;"></i></a>
+                            <a href="https://vn.linkedin.com/company/hcmut"><i class="fa-brands fa-linkedin" style="color: #001c4d;"></i></a>
+                </div>   
+        </div>
+    </footer>
+    <script src="./assets/js/auth_cfg.js"></script>
+    <script src="./assets/js/student-info.js"></script>   
+</body>
+</html>
+
+

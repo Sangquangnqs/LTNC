@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./assets/font/fontawesome-free-6.5.1-web/css/all.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" type="img/x-icon" href="./assets/img/favicon.ico">
+    <title>LMS Project</title>
+    <script defer src="./assets/js/main.js"></script>
+    <script defer src="./assets/js/auth_cfg.js"></script>
+</head>
+<body>
+        <div id="header">
+            <div id="nav">
+                <div class="nav__logo">
+                    <a href="./index.html">
+                        <img src="./assets/img/HCMUT_official_logo.png" alt="">
+                    </a>
+                </div>
+
+                <div class="nav__menu">
+                    <div class="menu-home menu-effect">
+                        <a href="./index.html">Trang chủ</a>
+                    </div>
+                    <div class="menu-teacher menu-effect auth-only">
+                        <a href="./teacher-info.html">
+                            Thông tin giảng viên
+                            <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                        
+                        <ul class="subnav teacher-only">
+                            <li><a href="./teacher_host.html">Thông tin cá nhân</a></li>
+                            <li><a href="./teacher_lich.html">Lịch trình giảng dạy</a></li>
+                            <li><a href="./teacher_classlist.html">Danh sách lớp</a></li>
+                        </ul>
+                        <div class="underline"></div>
+                    </div>
+                    <div class="menu-student menu-effect student-only">
+                        <a href="./student-info.html">
+                            Thông tin sinh viên
+                            <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                        <ul class="subnav">
+                            <li><a href="./student-info.html">Thông tin cá nhân</a></li>
+                            <li><a href="./student-info.html">Tiến trình học tập</a></li>
+                            <li><a href="./student-info.html">Kết quả đánh giá</a></li>
+                        </ul>
+                        <div class="underline"></div>
+                    </div>
+                    <div class="menu-courses menu-effect student-only">
+                        <a href="./courses.html">
+                            Khóa học của tôi
+                            <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                        <ul class="subnav">
+                            <li><a href="./courses.html">Danh sách khóa học</a></li>
+                            <li><a href="./courses.html">Đăng kí mới</a></li>
+                        </ul>
+                        <div class="underline"></div>
+                    </div>
+                </div>
+
+                <div class="nav__icon">
+                    <div class="noti-icon">
+                        <i class="fa-solid fa-bell"></i>
+                    </div>
+                    <div class="ava-icon">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <i class="arrow-down fa-solid fa-caret-down"></i>  
+                        <ul class="subnav">
+                            <li><a id="login" href="./login.html"></a></li>
+                            <li><a id="logout"></a></li>
+                            <li><a id="change-password" href="#"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider">
+            <div class="slides">
+                <!-- Radio Button Start  -->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <!-- Radio Button Close  -->
+        
+            <!-- Slide Image Start -->
+            <div class="slide first">
+                <img src="./assets/img/trangchu/slider/1.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="./assets/img/trangchu/slider/2.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="./assets/img/trangchu/slider/3.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="./assets/img/trangchu/slider/4.jpg" alt="">
+            </div>
+            
+    
+              <div class="navigation-auto">
+                <div class="auto-btn-1"></div>
+                <div class="auto-btn-2"></div>
+                <div class="auto-btn-3"></div>
+                <div class="auto-btn-4"></div>
+                
+            </div>
+              <!-- Automatic Navigation Close -->
+            </div>
+            <div class="navigation-mannual">
+                <label for="radio1" class="mannual-btn"></label>
+                <label for="radio2" class="mannual-btn"></label>
+                <label for="radio3" class="mannual-btn"></label>
+                <label for="radio4" class="mannual-btn"></label>
+             
+            </div>
+              <!-- Mannual Navigation Close -->
+        </div>
+        
+
+
+        <div class="grid wide">
+            <div id="about">
+                <div class="grid wide">
+                    <div class="row">
+                        <div class="col l-7">
+                            <div class="about__img">
+                                <img src="./assets/img/trangchu/Brainstorm.gif" alt="" style="width: 100%;">
+                            </div>
+                        </div>
+
+                        <div class="col l-5">
+                            <div class="about__text">
+                                <div class="about__slogan">
+                                    <h1>"Khai phóng - Tiên phong - Sáng tạo"</h1>
+                                </div>
+                                <div class="about__desc">
+                                    <p>
+                                        "Trường Đại học Bách khoa – Đại học quốc gia thành phố Hồ Chí Minh 
+                                        không chỉ là một điểm đến lý tưởng để học tập, nghiên cứu 
+                                        mà còn là một cộng đồng năng động - nơi tri thức, sáng tạo, hợp tác 
+                                        được phát huy mạnh mẽ." 
+                                    </p>
+                                    <p class="desc-author">
+                                        Hiệu trưởng, PGS.TS. Mai Thanh Phong
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="achievement">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-4">
+                        <h1 class="achievement__heading">Đôi nét về Bách khoa</h1>
+                    </div>
+        
+                    <div class="col l-o-1 l-5">
+                        <p class="achievement__text">Những thành tựu đáng ghi nhận trên suốt hành trình 65 năm Phú Thọ - Bách Khoa.</p>
+                    </div>
+                </div>
+                <p class="highlight-achieve">Một trong bốn trường đại học tại Việt Nam được công nhận đạt chất lượng kiểm định cơ sở giáo dục theo tiêu chuẩn HCERES, Châu Âu</p>
+                <div class="row">
+                    <div class="col l-3">
+                        <div class="achievement__box odd-box">
+                            <h2 class="num-achieve">64</h2>
+                            <p class="text-achieve">Chương trình đào tạo được công nhận đạt chuẩn bởi các tổ chức kiểm định uy tín trên thế giới</p>
+                        </div>
+                    </div>
+                    <div class="col l-3">
+                        <div class="achievement__box even-box">
+                            <h2 class="num-achieve">1.076</h2>
+                            <p class="text-achieve">Bài báo khoa học công nghệ được đăng trên các tạp chí quốc tế uy tín quốc tế (Năm 2023)</p>
+                        </div>
+                    </div>
+                    <div class="col l-3">
+                        <div class="achievement__box odd-box">
+                            <h2 class="num-achieve">28.000</h2>
+                            <p class="text-achieve">Sinh viên các hệ đào tạo</p>
+                        </div>
+                    </div>
+                    <div class="col l-3">
+                        <div class="achievement__box even-box">
+                            <h2 class="num-achieve">350</h2>
+                            <p class="text-achieve">Đối tác trên toàn thế giới</p>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="grid wide">
+            <div id="faculty">
+                <div class="grid wide">
+                    <div class="row">
+                        <div class="col l-3">
+                            <div class="faculty__left">
+                                <div class="faculty__heading">
+                                    <h1>Các Khoa & Ngành đào tạo</h1>
+                                </div>
+                                <div class="faculty__text">
+                                    <p>
+                                    Trường Đại học Bách khoa - ĐH Quốc gia TP.HCM hiện có 12 khoa với 45 ngành đào tạo khác nhau, trong đó bao gồm nhiều ngành nghề đang được xã hội quan tâm nhất. Các chương trình học tại Bách khoa được thực hiện theo chuẩn đào tạo quốc tế, mang lại sự phát triển toàn diện nhất về thể chất lẫn trí tuệ.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-o-1 l-8">
+                            <div class="faculty__right">
+                                <div class="grid wide">
+                                    <div class="row">
+                                        <div class="col l-4">
+                                            <div class="faculty__box">
+                                                <div class="faculty-name" style="margin-left: -42px;">
+                                                    <i class="fa-solid fa-bolt"></i>
+                                                    <p>Khoa Điện - Điện tử</p>
+                                                </div>
+                                                <ul>
+                                                    <li><a href="">Kỹ thuật Điện</a></li>
+                                                    <li><a href="">Kỹ thuật Điện tử - viễn thông</a></li>
+                                                    <li><a href="">Kỹ thuật điều khiển - tự động hóa</a></li>
+                                                    <li><a href="">Điện - Điện tử (CT Tiên tiến)</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                         
+                                        <div class="col l-4">
+                                            <div class="faculty__box">
+                                                <div class="faculty-name" style="margin-left: -51px;">
+                                                    <i class="fa-solid fa-hammer"></i>
+                                                    <p>Khoa Kỹ thuật Xây dựng</p>
+                                                </div>
+                                                <ul>
+                                                    <li><a href="">Công nghệ KT vật liệu xây dựng</a></li>
+                                                    <li><a href="">Kiến trúc</a></li>
+                                                    <li><a href="">KT cơ sở hạ tầng</a></li>
+                                                    <li><a href="">KT xây dựng công trình biển</a></li>
+                                                    <li><a href="">KT cơ sở hạ tầng</a></li>
+                                                    <li><a href="">KT xây dựng công trình thủy</a></li>
+                                                    <li><a href="">Kỹ thuật xây dựng</a></li>
+                                                    <li><a href="">KT trắc địa - bản đồ</a></li>
+                                                    <li><a href="">KT xây dựng công trình giao thông</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="col l-4">
+                                            <div class="faculty__box">
+                                                <div class="faculty-name" style="margin-left: -46px;">
+                                                    <i class="fa-solid fa-gear"></i>
+                                                    <p>Khoa Cơ khí</p>
+                                                </div>
+                                                <ul>
+                                                    <li><a href="">Công nghệ KT vật liệu xây dựng</a></li>
+                                                    <li><a href="">Kiến trúc</a></li>
+                                                    <li><a href="">KT cơ sở hạ tầng</a></li>
+                                                    <li><a href="">KT xây dựng công trình biển</a></li>
+                                                    <li><a href="">KT cơ sở hạ tầng</a></li>
+                                                    <li><a href="">KT xây dựng công trình thủy</a></li>
+                                                    <li><a href="">Kỹ thuật xây dựng</a></li>
+                                                    <li><a href="">KT trắc địa - bản đồ</a></li>
+                                                    <li><a href="">KT xây dựng công trình giao thông</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="col l-12" style="border: 1px solid #ccc; margin: 24px 0;"></div>
+
+                                        <div class="col l-4">
+                                            <div class="faculty__box">
+                                                <div class="faculty-name" style="margin-left: -42px;">
+                                                    <i class="fa-solid fa-flask"></i>
+                                                    <p>Khoa Kỹ thuật Hóa học</p>
+                                                </div>
+                                                <ul>
+                                                    <li><a href="">Công nghệ sinh học</a></li>
+                                                    <li><a href="">Công nghệ thực phẩm</a></li>
+                                                    <li><a href="">Kỹ thuật hóa học</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                         
+                                        <div class="col l-4">
+                                            <div class="faculty__box">
+                                                <div class="faculty-name" style="margin-left: -54px;">
+                                                    <i class="fa-solid fa-computer"></i>
+                                                    <p>Khoa Khoa học và Kỹ thuật Máy tính</p>
+                                                </div>
+                                                <ul>
+                                                    <li><a href="">Khoa học máy tính</a></li>
+                                                    <li><a href="">Kỹ thuật máy tính</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="col l-4">
+                                            <div class="faculty__box">
+                                                <div class="faculty-name" style="margin-left: -46px;">
+                                                    <i class="fa-solid fa-atom"></i>
+                                                    <p>Khoa Công nghệ vật liệu</p>
+                                                </div>
+                                                <ul>
+                                                    <li><a href="">Kỹ thuật vật liệu</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col l-12" style="border: 1px solid #ccc; margin: 24px 0;"></div>
+
+                                        <div class="col l-4">
+                                            <div class="faculty__box">
+                                                <div class="faculty-name" style="margin-left: -46px;">
+                                                    <i class="fa-solid fa-pen-ruler"></i>
+                                                    <p>Khoa Khoa học ứng dụng</p>
+                                                </div>
+                                                <ul>
+                                                    <li><a href="">Cơ kỹ thuật</a></li>
+                                                    <li><a href="">Vật lý kỹ thuật</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                         
+                                        <div class="col l-4">
+                                            <div class="faculty__box">
+                                                <div class="faculty-name" style="margin-left: -56px;">
+                                                    <i class="fa-solid fa-car-side"></i>
+                                                    <p>Khoa Kỹ thuật Giao thông</p>
+                                                </div>
+                                                <ul>
+                                                    <li><a href="">Kỹ thuật hàng không</a></li>
+                                                    <li><a href="">Kỹ thuật ôtô</a></li>
+                                                    <li><a href="">Kỹ thuật tàu thủy</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="col l-4">
+                                            <div class="faculty__box">
+                                                <div class="faculty-name" style="margin-left: -50px;">
+                                                    <i class="fa-solid fa-industry"></i>
+                                                    <p>Khoa Quản lý Công nghiệp</p>
+                                                </div>
+                                                <ul>
+                                                    <li><a href="">Quản lý công nghiệp</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="col l-12" style="border: 1px solid #ccc; margin: 24px 0;"></div>
+
+                                        <div class="col l-4">
+                                            <div class="faculty__box">
+                                                <div class="faculty-name" style="margin-left: -46px;">
+                                                    <i class="fa-solid fa-earth-asia"></i>
+                                                    <p>Khoa Kỹ thuật Địa chất và Dầu khí</p>
+                                                </div>
+                                                <ul>
+                                                    <li><a href="">Kỹ thuật dầu khí</a></li>
+                                                    <li><a href="">Kỹ thuật địa chất</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                         
+                                        <div class="col l-4">
+                                            <div class="faculty__box">
+                                                <div class="faculty-name" style="margin-left: -46px;">
+                                                    <i class="fa-solid fa-seedling"></i>
+                                                    <p>Khoa Môi trường và Tài nguyên</p>
+                                                </div>
+                                                <ul>
+                                                    <li><a href="">Kỹ thuật môi trường</a></li>
+                                                    <li><a href="">Quản lý tài nguyên và môi trường</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="col l-4">
+                                            <div class="faculty__box">
+                                                <div class="faculty-name" style="margin-left: -46px;">
+                                                    <i class="fa-solid fa-wrench"></i>
+                                                    <p>Trung tâm bảo dưỡng công nghiệp</p>
+                                                </div>
+                                                <ul>
+                                                    <li><a href="">Bảo dưỡng công nghiệp</a></li>
+                                                    <li><a href="">Cao đẳng Bảo dưỡng công nghiệp</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="end-decor">
+            <div class="end-decor__content">
+                <div style="display: flex;">
+                    <h1 style="margin-left: 20px;padding-top: 12px; color: #0c89dc">
+                        HCMUT - Trường đào tạo kỹ thuật hàng đầu Việt Nam
+                    </h1>
+                </div>
+                <div style="display: flex;margin: 25px;">
+                    <i class="fa-solid fa-user-tie size"></i>
+                    <div style="line-height: 25px;margin-left: 15px;">
+                        <p style="font-weight: bold;font-size: large;">Đội ngũ đào tạo chất lượng</p>
+                        <p style="font-size: small;">
+                            Với hơn 900 giảng viên có trình độ thạc sĩ trở lên</p>
+                    </div>
+                </div>
+                <div style="display: flex;margin: 25px;">
+                    <i class="fa-solid fa-book size"></i>
+                    <div style="line-height: 25px;margin-left: 15px;">
+                        <p style="font-weight: bold;font-size: large;">Chương trình đào tạo đạt chuẩn quốc tế</p>
+                        <p style="font-size: small;">
+                            Với 50 chương trình của nhiều tổ chức kiểm định quốc tế như AUN-QA, ASIIN, CTI, ABET, AQAS, FIBAA
+                        </p>
+                    </div>
+                </div>
+                <div style="display: flex;margin: 25px;">
+                    <i class="fa-solid fa-graduation-cap size"></i>
+                    <div style="line-height: 25px;margin-left: 15px;">
+                        <p style="font-weight: bold;font-size: large;">Chất lượng đầu ra được đảm bảo</p>
+                        <p style="font-size: small;">Với tỷ lệ sinh viên có việc làm của Trường là 98% trong năm đầu tiên sau khi tốt nghiệp</p>
+                    </div>
+                </div>
+            </div>
+            <div class="end-decor__slideshow">
+                <img src="./assets/img/trangchu/slider/end-decor.jpg" class="slideshow-item pos1">
+                <img src="./assets/img/trangchu/slider/end-decor.jpg" class="slideshow-item pos2">
+            </div>
+        </div>
+
+        
+        <!--footer start-->
+        <footer id="footer"> 
+            <div class="chan">
+                    <div class="cotleft">
+                        <div class="logo-text-container">
+                            <img class="logo" src="./assets/img/HCMUT_official_logo.png" alt="logo" onclick="reloadPage()">
+                            <div class="text">
+                                <p> Đại học quốc gia thành phố Hồ Chí Minh </p>
+                                <p> Trường đại học Bách khoa </p>
+                            </div>
+                        </div>
+                        <div class="icon" style="margin-top:30px;">
+                            <i class="fa-solid fa-mobile-screen" style="margin-top:-10px;"></i>
+                            <p class="inf"><a href="tel: 0838 654 087" class="map">Điện thoại: (02) 838 654 087  ; Số Fax: (02) 838 637 002</a></p>
+                        </div>
+                        <br>
+                        <div class="icon">
+                            <i class="fa-solid fa-envelope" style="margin-top:-10px;"></i>
+                            <p class="inf"><a href="mailto: pdt@hcmut.edu.vn " class="map">Email: pdt@hcmut.edu.vn</a></p>
+                        </div>
+                        <br>
+                        <div class="icon">
+                            <i class="fa-solid fa-map-location-dot" style="margin-top:-10px;"></i>
+                            <p class="inf"><a href="https://maps.app.goo.gl/NM7Kr9vRVhMyhNZP8" class="map">
+                                Địa chỉ: Cơ sở Lý Thường Kiệt: 268 Lý Thường Kiệt, Phường 14, Quận 10, TP. HCM</a></p>
+                        </div>
+                        <div class="icon">
+                            <p class="inf" style="margin-left:80px;"><a href="https://maps.app.goo.gl/JWBADEVHJPFfKAgt7" class="map">
+                                Cơ sở Dĩ An: Khu phố Tân Lập, Phường Đông Hòa, TP. Dĩ An, Tỉnh Bình Dương</a></p>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+        
+                    <div class="cotright collg2 colmd4">
+                        <div class="logo-text-container">
+                            <div class="home">
+                                <i class="fa-solid fa-house-chimney-window"></i>
+                            </div>
+                            <div class="tq">
+                                <p><a href="#" class="main">TỔNG QUAN</a></p>
+                            </div>
+                        </div>
+                        <div class="tqchild">
+                            <p><a href="https://hcmut.edu.vn/tong-quan" class="ctqs">Giới thiệu</a></p>
+                            <p><a href="https://hcmut.edu.vn/contact" class="ctqs">Liên hệ</a></p>
+                            <p><a href="http://www.aao.hcmut.edu.vn/image/data/quyche/VB%20to%CC%82%CC%89ng%20ho%CC%9B%CC%A3p%20Quy%20%C4%91i%CC%A3nh%20ve%CC%82%CC%80%20ho%CC%A3c%20vu%CC%A3%20va%CC%80%20%C4%91a%CC%80o%20ta%CC%A3o%20(1).pdf" class="ctqs">Điều khoản</a></p>
+                            <p><a href="https://hcmut.edu.vn/library-page" class="ctqs">Thư viện</a></p>
+                        </div>  
+                    </div>
+        
+        
+                <div class="dangnhap collg2 colmd4">
+                    <div class="logo-text-container">
+                        <div class="home" style="color:#9966ff;">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <div class="tq">
+                            <p><a href="#" class="main">Đăng nhập</a></p>
+                        </div>
+                    </div>
+                    <div class="tqchild">
+                        <p><a href="./login.html" class="ctqs">Giảng viên</a></p>
+                        <p><a href="./login.html" class="ctqs">Sinh viên</a></p>
+                        <p><a href="./login.html" class="ctqs">Admin</a></p>
+                        <p><a href="./login.html" class="ctqs">Guest</a></p>
+                    </div>
+                    
+                </div>
+                <div class="dangnhap collg2 colmd4">
+                    <div class="logo-text-container">
+                        <div class="home" style="color:#40bf80;">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+                        <div class="tq">
+                            <p><a href="#" class="main">Chiến lược</a></p>
+                        </div>
+                    </div>
+                    <div class="tqchild">
+                        <p><a href="https://hcmut.edu.vn/gioi-thieu/ke-hoach-chien-luoc" class="ctqs">Mục tiêu tương lai</a></p>
+                        <p><a href="https://hcmut.edu.vn/hoat-dong-doi-moi-sang-tao" class="ctqs">Dự án dài hạn</a></p>
+                        <p><a href="https://hcmut.edu.vn/ba-cong-khai" class="ctqs">Hoạt động</a></p>
+                        <p><a href="mailto: pdt@hcmut.edu.vn" class="ctqs">Feedback</a></p>
+                    </div>
+                </div>
+        
+            </div>
+            
+            <div class="copyright">
+                    <div class="icon">
+                            <i class="fa-solid fa-copyright"></i>
+                            <p class="te" style="margin-top:10px; font-weight:bold;">2007-2024 BKEL. Hệ thống giáo dục hàng đầu Việt Nam </p>
+                    </div>
+                    <div class="social a">
+                                <a href="https://www.facebook.com/truongdhbachkhoa/"><i class="fa-brands fa-facebook" style="color: #001c4d;"></i></a>
+                                <a href="https://www.instagram.com/bachkhoa.hcmut/"><i class="fa-brands fa-square-instagram" style="color: #b3059c;"></i></a>
+                                <a href="https://www.youtube.com/@truongdhbachkhoa"><i class="fa-brands fa-youtube" style="color: #c20d00;"></i></a>
+                                <a href="https://www.tiktok.com/tag/hcmut"><i class="fa-brands fa-tiktok" style="color: #131416;"></i></a>
+                                <a href="https://vn.linkedin.com/company/hcmut"><i class="fa-brands fa-linkedin" style="color: #001c4d;"></i></a>
+                    </div>   
+            </div>
+        </footer>
+        
+    </div>
+    
+</body>
+</html>

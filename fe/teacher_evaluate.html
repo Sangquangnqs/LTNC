@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="./assets/font/fontawesome-free-6.5.1-web/css/all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/teacher_evaluate.css">
+    <script src="./assets/js/reload.js"></script>
+    <link rel="icon" type="img/x-icon" href="./assets/img/favicon.ico">
+
+    <title>LMS Project</title>
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <div id="nav">
+                <div class="nav__logo">
+                    <a href="./index.html">
+                        <img src="./assets/img/HCMUT_official_logo.png" alt="">
+                    </a>
+                </div>
+    
+                <div class="nav__menu">
+                    <div class="menu-home menu-effect">
+                        <a href="./index.html">Trang chủ</a>
+                    </div>
+                    <div class="menu-teacher menu-effect teacher-only">
+                        <a href="./teacher_host.html">
+                            Thông tin giảng viên
+                            <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                        
+                        <ul class="subnav">
+                            <li><a href="./teacher_host.html">Thông tin cá nhân</a></li>
+                            <li><a href="./teacher_lich.html">Lịch trình giảng dạy</a></li>
+                            <li><a href="./teacher_classlist.html">Danh sách lớp</a></li>
+                        </ul>
+                        <div class="underline"></div>
+                    </div>
+                    
+                    <div class="menu-courses menu-effect student-only">
+                        <a href="./courses.html">
+                            Khóa học của tôi
+                            <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                        <ul class="subnav">
+                            <li><a href="./courses.html">Danh sách khóa học</a></li>
+                            <li><a href="./courses.html">Đăng kí mới</a></li>
+                        </ul>
+                        <div class="underline"></div>
+                    </div>
+                </div>
+    
+                <div class="nav__icon">
+                    <div class="noti-icon">
+                        <i class="fa-solid fa-bell"></i>
+                    </div>
+                    <div class="ava-icon">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <i class="arrow-down fa-solid fa-caret-down"></i>  
+                        <ul class="subnav">
+                            <li><a id="login" href="./login.html"></a></li>
+                            <li><a id="logout"></a></li>
+                            <li><a id="change-password" href="#"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+
+
+          
+        <div id="content">
+            <div class="container">
+                <div class="row">
+                    <div class="self-inf">
+                        <p> Đánh giá sinh viên </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="ava col-lg-4">
+                        <div class="avacircle">
+                            <div class="avatar" id="avatar">
+                                <img src="./assets/img/teacher/student.jpg" alt="Avatar">
+                            </div>
+                            <div class="ten" id="student-info">
+                                <p class="name-id"> </p>
+                                <p class="mail"></p>
+                            </div>
+                            <div class="change">
+                                <div class="teachicon" onclick="openModal()">
+                                    <i class="fa-solid fa-pen-to-square" style="color: #b2343a;"></i>
+                                    <p style="color:#b2343a;text-transform: uppercase;"> Cập nhật điểm </p>
+                                </div>
+                                <div class="teachicon" onclick="showComment()">
+                                    <i class="fa-regular fa-envelope" style="color: #27889b;"></i>
+                                    <p style="color:#27889b; text-transform: uppercase;">Nhận xét </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="teach-content col-lg-8">
+                        <div class="teach-body">
+                            <div class="techinf">
+                                <p style="padding-top:10px;"> BẢNG ĐIỂM SINH VIÊN</p>
+                            </div>
+                            <br>
+                            <div class="thongtin">
+                                <ol>
+                                    <div id="personalInfo">
+                                        <div class="table-responsive">
+                                            <table id="studentTable" class="table table-striped">
+                                                <thead>
+                                                  <tr>
+                                                    <th>THÀNH PHẦN</th>
+                                                    <th>ĐIỂM SỐ</th>
+                                                    <th>LƯU Ý</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <td>Bài tập + Chuyên cần</td>
+                                                    <td id="bt-dd"></td>
+                                                    <td id="bt-dd-note">10%</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>Bài tập lớn</td>
+                                                    <td id="bt-lon"></td>
+                                                    <td id="bt-lon-note">20%</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>Kiểm tra Giữa kì</td>
+                                                    <td id="kt-giua"></td>
+                                                    <td id="kt-giua-note">20%</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>Kiểm tra Cuối kì</td>
+                                                    <td id="kt-cuoi"></td>
+                                                    <td id="kt-cuoi-note">50%</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td style="font-weight:bold; color:red;">Tổng kết</td>
+                                                    <td id="tong-ket"></td>
+                                                    <td id="tong-ket-note">Điểm thành phần phải &ge; 2</td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                        </div>
+                                    </div>   
+                                    <div class="certi">
+                                        <strong style="margin-bottom:10px;">Nhận xét:</strong>
+                                        <i class="fa-solid fa-pen-to-square" style="color: #b2343a;margin-top:-10px; margin-left:10px; font-size:20px;" onclick="showComment()"></i>
+                                    </div>
+                                    <div class="nhanxet">
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <p> Mục này trống</p>
+                                        <p>Thêm vào nhận xét của bạn</p>
+                                    </div>
+                                </ol>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+    <!-- đổi điểm số -->
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 class="doianh">Cập nhật điểm số</h2>
+        <form id="updateForm" onsubmit="updateScores(event)">
+            <div>
+                <label for="bt-dd-input">Bài tập + Điểm danh:</label>
+                <input type="number" id="bt-dd-input" name="bt-dd" min="0" max="10" step="0.1">
+            </div>
+            <div>
+                <label for="bt-lon-input">Bài tập lớn:</label>
+                <input type="number" id="bt-lon-input" name="bt-lon" min="0" max="10" step="0.1">
+            </div>
+            <div>
+                <label for="kt-giua-input">Kiểm tra Giữa kì:</label>
+                <input type="number" id="kt-giua-input" name="kt-giua" min="0" max="10" step="0.1">
+            </div>
+            <div>
+                <label for="kt-cuoi-input">Kiểm tra Cuối kì:</label>
+                <input type="number" id="kt-cuoi-input" name="kt-cuoi" min="0" max="10" step="0.1">
+            </div>
+            <input type="submit" value="Cập nhật" id="luu">
+        </form>
+        </div>
+    </div>
+
+
+  <!-- nhận xét cho sinh viên -->
+  <!-- Modal -->
+    <div id="evaluatemodal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeEvaluateModal()">&times;</span>
+            <h2 class="doianh">Nhận xét</h2>
+            <input type="text" id="commentInput" placeholder="Nhập nhận xét của bạn..." style="width:100%; height:100px; margin-bottom:32px; padding-left: 15px; border-radius:10px">
+            <button id="confirmBtn" onclick="confirmEvaluation()" class="luu">Xác nhận</button>
+        </div>
+    </div>
+
+    <!-- đổi tên sinh viên -->
+    <!-- Modal -->
+    <div id="changeName" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModalName()">&times;</span>
+            <h2 class="doianh">Cập nhật tên & MSSV</h2>
+            <form id="editFormName">
+                <label for="editStudentName">Tên sinh viên:</label>
+                <input type="text" id="editStudentName" name="editStudentName" required><br><br>
+                <label for="editStudentID">Mã số sinh viên:</label>
+                <input type="number" id="editStudentID" name="editStudentID" required><br><br>
+                <button type="submit" class="luu">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- đổi mail sinh viên -->
+    <div id="changeEmail" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModalEmail()">&times;</span>
+            <h2 class="doianh">Cập nhật Email</h2>
+            <form id="editFormEmail">
+                <label for="editStudentEmail">Email:</label>
+                <input type="email" id="editStudentEmail" name="editStudentEmail" required><br><br>
+                <button type="submit" class="luu">Submit</button>
+            </form>
+        </div>
+    </div>
+  
+
+    </div>
+
+    <!--footer start-->
+    <footer id="footer"> 
+        <div class="chan">
+                <div class="cotleft">
+                    <div class="logo-text-container">
+                        <img class="logo" src="./assets/img/HCMUT_official_logo.png" alt="logo" onclick="reloadPage()">
+                        <div class="text">
+                            <p> Đại học quốc gia thành phố Hồ Chí Minh </p>
+                            <p> Trường đại học Bách khoa </p>
+                        </div>
+                    </div>
+                    <div class="icon" style="margin-top:30px;">
+                        <i class="fa-solid fa-mobile-screen" style="margin-top:-10px;"></i>
+                        <p class="inf"><a href="tel: 0838 654 087" class="map">Điện thoại: (02) 838 654 087  ; Số Fax: (02) 838 637 002</a></p>
+                    </div>
+                    <br>
+                    <div class="icon">
+                        <i class="fa-solid fa-envelope" style="margin-top:-10px;"></i>
+                        <p class="inf"><a href="mailto: pdt@hcmut.edu.vn " class="map">Email: pdt@hcmut.edu.vn</a></p>
+                    </div>
+                    <br>
+                    <div class="icon">
+                        <i class="fa-solid fa-map-location-dot" style="margin-top:-10px;"></i>
+                        <p class="inf"><a href="https://maps.app.goo.gl/NM7Kr9vRVhMyhNZP8" class="map">
+                            Địa chỉ: Cơ sở Lý Thường Kiệt: 268 Lý Thường Kiệt, Phường 14, Quận 10, TP. HCM</a></p>
+                    </div>
+                    <div class="icon">
+                        <p class="inf" style="margin-left:80px;"><a href="https://maps.app.goo.gl/JWBADEVHJPFfKAgt7" class="map">
+                            Cơ sở Dĩ An: Khu phố Tân Lập, Phường Đông Hòa, TP. Dĩ An, Tỉnh Bình Dương</a></p>
+                    </div>
+                    <br>
+                    <br>
+                </div>
+    
+                <div class="cotright collg2 colmd4">
+                    <div class="logo-text-container">
+                        <div class="home">
+                            <i class="fa-solid fa-house-chimney-window"></i>
+                        </div>
+                        <div class="tq">
+                            <p><a href="#" class="main">TỔNG QUAN</a></p>
+                        </div>
+                    </div>
+                    <div class="tqchild">
+                        <p><a href="https://hcmut.edu.vn/tong-quan" class="ctqs">Giới thiệu</a></p>
+                        <p><a href="https://hcmut.edu.vn/contact" class="ctqs">Liên hệ</a></p>
+                        <p><a href="http://www.aao.hcmut.edu.vn/image/data/quyche/VB%20to%CC%82%CC%89ng%20ho%CC%9B%CC%A3p%20Quy%20%C4%91i%CC%A3nh%20ve%CC%82%CC%80%20ho%CC%A3c%20vu%CC%A3%20va%CC%80%20%C4%91a%CC%80o%20ta%CC%A3o%20(1).pdf" class="ctqs">Điều khoản</a></p>
+                        <p><a href="https://hcmut.edu.vn/library-page" class="ctqs">Thư viện</a></p>
+                    </div>  
+                </div>
+    
+    
+            <div class="dangnhap collg2 colmd4">
+                <div class="logo-text-container">
+                    <div class="home" style="color:#9966ff;">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <div class="tq">
+                        <p><a href="#" class="main">Đăng nhập</a></p>
+                    </div>
+                </div>
+                <div class="tqchild">
+                    <p><a href="./login.html" class="ctqs">Giảng viên</a></p>
+                    <p><a href="./login.html" class="ctqs">Sinh viên</a></p>
+                    <p><a href="./login.html" class="ctqs">Admin</a></p>
+                    <p><a href="./login.html" class="ctqs">Guest</a></p>
+                </div>
+                
+            </div>
+            <div class="dangnhap collg2 colmd4">
+                <div class="logo-text-container">
+                    <div class="home" style="color:#40bf80;">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <div class="tq">
+                        <p><a href="#" class="main">Chiến lược</a></p>
+                    </div>
+                </div>
+                <div class="tqchild">
+                    <p><a href="https://hcmut.edu.vn/gioi-thieu/ke-hoach-chien-luoc" class="ctqs">Mục tiêu tương lai</a></p>
+                    <p><a href="https://hcmut.edu.vn/hoat-dong-doi-moi-sang-tao" class="ctqs">Dự án dài hạn</a></p>
+                    <p><a href="https://hcmut.edu.vn/ba-cong-khai" class="ctqs">Hoạt động</a></p>
+                    <p><a href="mailto: pdt@hcmut.edu.vn" class="ctqs">Feedback</a></p>
+                </div>
+            </div>
+    
+        </div>
+        
+        <div class="copyright">
+                <div class="icon">
+                        <i class="fa-solid fa-copyright"></i>
+                        <p class="te" style="margin-top:10px; font-weight:bold;">2007-2024 BKEL. Hệ thống giáo dục hàng đầu Việt Nam </p>
+                </div>
+                <div class="social a">
+                            <a href="https://www.facebook.com/truongdhbachkhoa/"><i class="fa-brands fa-facebook" style="color: #001c4d;"></i></a>
+                            <a href="https://www.instagram.com/bachkhoa.hcmut/"><i class="fa-brands fa-square-instagram" style="color: #b3059c;"></i></a>
+                            <a href="https://www.youtube.com/@truongdhbachkhoa"><i class="fa-brands fa-youtube" style="color: #c20d00;"></i></a>
+                            <a href="https://www.tiktok.com/tag/hcmut"><i class="fa-brands fa-tiktok" style="color: #131416;"></i></a>
+                            <a href="https://vn.linkedin.com/company/hcmut"><i class="fa-brands fa-linkedin" style="color: #001c4d;"></i></a>
+                </div>   
+        </div>
+    </footer>
+    <script src="./assets/js/auth_cfg.js"></script>
+    <script src="./assets/js/teacher_evaluate.js"></script>
+</body>
+</html>
