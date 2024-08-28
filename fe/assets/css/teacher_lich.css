@@ -1,0 +1,742 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+
+
+#header {
+    width: 100%;
+    height: 80px;
+    /* background-color: #F8E6CB; */
+    background-color:#ebf3ff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#nav {
+    position: relative;
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    line-height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#nav .nav__logo {
+    width: 80px; 
+    height: 80px;  
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+}
+
+#nav .nav__logo:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+
+.nav__logo img {
+    width: 100%;
+    padding: 12px;
+    margin-left: -12px;
+}
+
+#nav .nav__menu {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+#nav .nav__menu div {
+    padding: 0 20px;    
+}
+
+#nav .nav__menu a{
+    text-decoration: none;
+    color: #000;
+}
+
+#nav .nav__menu:hover {
+    cursor: pointer;
+}
+
+#nav .menu-home:hover > a,
+#nav .menu-teacher:hover > a, 
+#nav .menu-student:hover > a, 
+#nav .menu-courses:hover > a {
+    color: #0c89dc;
+}
+
+#nav .ava-icon:hover .subnav,
+#nav .menu-teacher:hover > .subnav,
+#nav .menu-student:hover > .subnav,
+#nav .menu-courses:hover > .subnav
+{
+    display: block;
+    border-radius: 20px;
+}
+
+
+#nav .subnav {
+    position: absolute;
+    /* background-color: #fdf7e9; */
+    background-color: #fff;
+    list-style-type: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    min-width: 200px;
+    border-radius: 20px;
+    line-height: 60px !important;
+    display: none;
+}
+
+#nav .subnav li {
+    display: block;
+}
+
+#nav .subnav li:hover {
+    background-color: #8abee0;
+    border-radius: 20px;
+}
+
+#nav .subnav a {
+    display: block;
+    font-size: 15px;
+    padding: 0 20px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #000;
+}
+
+
+#nav .menu-effect > a {
+    position: relative;
+}
+
+#nav .menu-effect > a::before {
+    content: '';
+    width: 0px;
+    height: 5px;
+    background-color: #0c89dc;
+    position: absolute;
+    top: 120%;
+    transition: .5s;
+}
+
+#nav .menu-effect:hover > a::before{
+    width: 100%;
+}
+
+/* .nav__menu:hover{
+    color: rgba(9, 40, 241, 0.573);
+} */
+
+#nav .nav__icon {
+    max-height: 80px    ;
+    color: #002792;
+    line-height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+
+.nav__icon .noti-icon {
+    padding: 0 8px;
+    font-size: 24px;
+}
+
+.nav__icon .ava-icon {
+    padding-left: 16px;
+    font-size: 48px;
+    position: relative;
+    margin-right: -12px;
+}
+
+.nav__icon .ava-icon .arrow-down {
+    font-size: 16px;
+    margin-left: -10px;
+    margin-right: 12px;
+}
+
+#nav .nav__icon .subnav {
+    position: absolute;
+    right: 0;
+}
+
+
+.nav__icon .noti-icon:hover,
+.nav__icon .ava-icon:hover {
+    color: #0c89dc;
+    cursor: pointer;
+}
+
+#content {
+    /* position: relative; */
+    margin-top: 80px;
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: #f6fcff;
+    padding-bottom: 60px;
+    /* background: linear-gradient(-90deg,#f2d0f5, #d6dffe);     */
+}
+
+#content .content__title {
+    margin: 32px auto;
+    height: 80px;
+    border-radius: 25px;
+    border: 2px solid #002792; /* Thay ridge thành solid và chỉ định màu border */
+    background-image: linear-gradient(90deg, #c4d2fd, #f0cff5);
+    text-align: center;
+    line-height: 80px;
+    color: #000;
+    text-shadow: 2px 2px #ccc;
+    opacity: 0.8;
+    font-size: 30px;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Thêm box-shadow cho hiệu ứng bóng đổ */
+    transition: all 0.3s ease; /* Thêm transition cho hiệu ứng mượt mà */
+}
+
+#content .content__title:hover {
+    transform: translateY(-10px); /* Thêm hiệu ứng nâng cao khi hover */
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15); /* Thay đổi box-shadow khi hover */
+    background-image: linear-gradient(-90deg, #c4d2fd, #f0cff5);
+}
+
+/* phan body */
+
+/* lich trinh giang day */
+
+
+#content .container .row .self-inf{
+    background-image: linear-gradient(90deg, #c4d2fd, #f0cff5);
+    height: 60px !important;
+    line-height: 60px;
+    font-weight:bold;
+    text-align:center;
+    border-radius: 25px;
+    border: 2px solid #002792; /* Thay ridge thành solid và chỉ định màu border */
+    height:50px;
+    font-size:30px;
+    margin-top:30px;
+    margin-bottom:30px;
+    text-transform:uppercase;
+    text-shadow: 2px 2px #ccc;
+    opacity: 0.8;
+    font-size: 25px;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Thêm box-shadow cho hiệu ứng bóng đổ */
+    transition: all 0.3s ease; /* Thêm transition cho hiệu ứng mượt mà */
+    color: #000;
+}
+
+
+#content .container .row .self-inf:hover {
+    transform: translateY(-10px); /* Thêm hiệu ứng nâng cao khi hover */
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15); /* Thay đổi box-shadow khi hover */
+    background-image: linear-gradient(-90deg, #c4d2fd, #f0cff5);
+}
+
+#content .container .row .dieuhuong .khunglich{
+    border: 1px solid  #002792;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Thêm box-shadow cho hiệu ứng bóng đổ */
+    transition: all 0.3s ease; /* Thêm transition cho hiệu ứng mượt mà */
+    overflow:hidden; /*đảm bảo chữ không bị tràn ra ngoài*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; /* Khoảng cách giữa hình ảnh và chữ */
+    height:750px;
+}
+#content .container .row .dieuhuong .khunglich .changemain{
+    display: flex; 
+    flex-direction: row; /* Hiển thị các icon theo chiều ngang */
+}
+#content .container .row .dieuhuong .khunglich .changemain .teachiconmain {
+    display: flex; 
+    flex-direction: row; /* Hiển thị các icon theo chiều ngang */
+    align-items: center; 
+    color: black;
+    /* border: 1px solid black; */
+    padding:7px;
+    border-radius: 5px;
+    margin-right:10px;
+    margin-bottom:10px;
+}
+#content .container .row .dieuhuong .khunglich .changemain .teachiconmain i {
+    margin-right: 10px; /* Khoảng cách giữa icon và văn bản */
+}
+
+#content .container .row .dieuhuong .khunglich .changemain .teachiconmain p {
+    margin: 0; /* Loại bỏ margin của đoạn văn bản */
+    text-transform: uppercase;
+    font-weight:bold;
+    font-size:20px;
+}
+
+
+#content .container .row .dieuhuong .khunglich .display .change .teachicon {
+    display: flex; 
+    flex-direction: row; /* Hiển thị các icon theo chiều ngang */
+    align-items: center; 
+}
+#content .container .row .dieuhuong .khunglich .display .change .teachicon:hover{
+    opacity:0.7;
+    cursor:pointer;
+    /* background-color: #bfbfbf;
+    font-weight:bold; */
+}
+#content .container .row .dieuhuong .khunglich .display .change .teachicon i {
+    margin-right: 10px; /* Khoảng cách giữa icon và văn bản */
+    
+}
+
+#content .container .row .dieuhuong .khunglich .display .change .teachicon p {
+    margin: 0; /* Loại bỏ margin của đoạn văn bản */
+
+}
+
+#content .container .row .dieuhuong .khunglich .display{
+    border: 1px solid black;
+    border-radius:5px;
+    width: 100%;
+    height: 40px;
+    /* padding-left:10px; */
+    padding-top:5px;
+    padding-bottom:15px;
+    margin-bottom:10px;
+    font-size:20px;
+    text-transform: uppercase;
+    font-weight:bold;
+    display: flex; justify-content: center;
+
+}
+#content .container .row .dieuhuong .khunglich .display p{
+    margin-bottom:0;
+}
+#dropdownContent {
+    margin-top:35px;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    width: 320px;
+}
+
+#dropdownContent p {
+    /* color: black; */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    border:1px solid black;
+    border-radius:10px;
+    font-size:15px;
+    color:#004080;
+    margin-top:10px;
+
+
+
+}
+
+#dropdownContent p:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+    opacity:0.7;
+}
+
+
+/* phần hiển thị thông tin của giáo viên */
+#content .container .row .lichcontent .teach-body{
+    border: 1px double  #002792;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Thêm box-shadow cho hiệu ứng bóng đổ */
+    transition: all 0.3s ease; /* Thêm transition cho hiệu ứng mượt mà */
+    overflow:hidden; /*đảm bảo chữ không bị tràn ra ngoài*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; /* Khoảng cách giữa hình ảnh và chữ */
+    margin-bottom:10px;
+    height:750px;
+}
+
+#content .container .row .lichcontent .teach-body .techinf{
+    font-weight:bold;
+    text-align: center;
+    font-size:20px;
+    background-image: linear-gradient(-90deg, #f7c0ec,#a7bdea);
+    border-radius:10px;
+    padding-left:2px;
+    padding-right:2px;
+    width:100%;
+}
+
+#content .container .row .lichcontent .teach-body .calendar {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    /* width: 300px; Điều chỉnh kích thước khung lịch */
+    width:710px;
+}
+
+
+
+.month {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align:center;
+    text-transform: uppercase;
+}
+
+.days {
+    display: flex;
+}
+
+.days .day {
+    flex: 1;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius:10px;
+    margin-right:5px;
+}
+.days .day h2{
+    border-bottom:1px solid black;
+    border-radius:2px;
+    padding-bottom:10px;
+}
+ 
+.days .day .card{
+    border-bottom:1px solid black;
+    padding-bottom:10px;
+    height:90px;
+    border-radius:2px;
+}
+.days .day .card:hover{
+    opacity:0.7;
+}
+
+.days .day .card p{
+    margin-bottom:0px;
+}
+
+.card .sua{
+    border-bottom:1px solid #ffffe6;
+    border-radius:10px;
+    background-color:#d9d9d9;
+}
+
+ /* phần hiển thị mặc định */
+
+#content .container .row .lichcontent .teach-body .macdinh {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    /* width: 300px; Điều chỉnh kích thước khung lịch */
+    width:710px;
+}
+
+
+.row .ngay {
+    text-align: center; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    margin-top:-10px;
+    
+}
+
+.ngay .circle {
+    margin-top:-10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.circle .number {
+    font-size: 16px;
+    font-weight: bold;
+}
+.row .monhoc{
+    margin-left:-30px;
+}
+.monhoc .themon{
+    
+    border:0px solid black;
+    border-radius:10px;
+    padding-left:10px;
+    padding-top:3px;
+    margin-bottom:7px;
+}
+.themon p{
+    margin-bottom:-1px;
+}
+
+/* phần hiển thị tùy chỉnh */
+
+#content .container .row .lichcontent .teach-body .hai,.ba,.tu,.nam,.sau,.bay,.cn {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    /* width: 300px; Điều chỉnh kích thước khung lịch */
+    width:710px;
+}
+
+/* Căn lề phải cho cột thời gian */
+.table th,td:first-child {
+    text-align: right;
+    width:100px;
+}
+
+/* Căn lề trái cho cột môn học */
+.table th,td:last-child {
+    text-align: center;
+}
+.table td,th:nth-child(2){
+    text-align:center;
+}
+
+
+
+
+
+/* phan footer*/
+
+
+
+
+
+footer{
+    background-color:#ebf3ff;
+}
+/*1 nua trai*/
+
+.chan > .cotleft >.logo-text-container, 
+ .chan > .cotright > .logo-text-container,
+ .chan > .dangnhap > .logo-text-container{
+    display: flex;
+    align-items: center; 
+}
+.chan > .cotleft > .logo-text-container > .logo{
+    margin-top:30px;
+    width: 56px; 
+    height: 56px;  
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    /* margin-left:100px; */
+}
+.chan > .cotleft > .logo-text-container > .logo:hover{
+    cursor:pointer;
+    opacity:0.7;
+}
+.chan > .cotleft > .logo-text-container > .text{
+    text-align:center;
+    font-weight:bold;
+    text-transform:uppercase;
+    margin-top:40px;
+    margin-left:40px;
+    /* flex-grow: 1; */
+    font-size:17px;
+}
+
+.icon > .inf{
+    /* padding-top:10px; */
+    font-weight:400;
+    color: black;
+}
+.chan > .cotleft> .icon, 
+.copyright >.icon {
+    display: flex; 
+    align-items: center; 
+    /* margin-left: 100px; */
+    color: black;
+    /* margin-top:10px; */
+}
+.chan > .cotleft > .icon i, 
+.copyright > .icon i {
+    margin-right: 10px; 
+}
+
+ .icon .map{
+    color:black;
+    text-decoration: none;
+    font-size:12px;
+}
+.tqchild{
+    display:block;
+}
+.tqchild p {
+    margin: 15px 0;
+    font-size:13px;
+}
+
+.tqchild .ctqs{
+    color:black;
+    text-decoration: none;
+}
+.tqchild .ctqs:hover, .icon .map:hover{
+    cursor:pointer;
+    opacity:0.7;
+}
+
+
+/*1 nua phai*/
+/* home*/
+.chan > .collg2{
+    margin-left:-30px;
+}
+
+.chan > .colmd4{
+    padding-left:30px;
+    margin-top:-50px;
+}
+.chan > .cotright > .logo-text-container,
+ .chan > .dangnhap > .logo-text-container{
+    margin-left:55px;
+}
+.logo-text-container > .home{
+    margin-top:90px;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    margin-left:20px;
+    font-size:30px;
+    color:#ff884d;
+    margin-right:10px;
+}
+.logo-text-container > .tq{
+    text-align:left;
+    font-weight:bold;
+    text-transform:uppercase;
+    margin-top:100px;
+    flex-grow: 1; 
+    /* margin-bottom:10px; */
+    font-size:17px;
+}
+.dangnhap> .tqchild,
+.cotright > .tqchild{
+    /* margin-top:-20px; */
+    margin-left:120px;
+    font-weight:400;
+    /* font-size:15px; */
+}
+
+
+footer .chan{
+    padding-top:32px;
+    display: flex;  
+    /* flex-wrap: wrap; */
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+}
+
+
+.copyright {
+    padding-bottom: 20px;
+    display: flex;
+    flex-wrap: nowrap; 
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.copyright > .social {
+    font-size: 28px; 
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; 
+    /* margin-right: 10%;  */
+    flex:1;
+}
+
+.social a {
+    margin-right: 1vw; 
+}
+
+.tq .main{
+    color:black;
+    text-decoration:none;
+    position:relative;
+}
+.tq .main:hover{
+    color:rgb(4,43,146);
+    cursor:pointer;
+}
+@media only screen and (max-width: 992px) {
+    .copyright > .social{
+        display:none;
+    }
+    .chan > .cotleft> .icon, 
+    .copyright >.icon{
+        margin-left:30px;
+    }   
+}
+@media only screen and (max-width: 768px) { 
+    footer .chan{
+        padding-top:70px;
+        display: inline-block;
+    }
+    .chan > .cotleft > .logo-text-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .chan > .cotleft > .logo-text-container > .logo{
+        margin-left:0;
+        width:50px;
+        height:50px;
+    }
+    .chan > .cotleft > .logo-text-container > .text{
+        font-size:15px;
+        margin-left:0;
+    }
+
+    .dangnhap> .tqchild,
+    .cotright > .tqchild{
+        margin-left:0px;
+        font-weight:400;
+    }
+
+    .tqchild {
+        text-align: center; /* Căn giữa nội dung trên màn hình nhỏ hơn 768px */
+    }
+
+    .tqchild .map,
+    .icon .map {
+        display: block;
+        margin: 0 auto; /* Để căn giữa nội dung trong các phần tử này */
+    }
+    .copyright{
+        font-size: 12px;
+    }
+
+}
+
+

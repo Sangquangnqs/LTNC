@@ -1,0 +1,170 @@
+#content .quiz-name {
+    font-size: 24px;
+    font-weight: 700;
+    color: #002792;
+    margin: 24px 0 40px;
+}
+
+#content .qs-order {
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    background-color: #ebf3ff;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+#content .qs-wrapper {
+    background-color: #e7f3f5;
+    border-radius: 15px;
+    padding: 16px;
+}
+
+
+#content .qs-wrapper .qs-question__input {
+    padding: 16px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#content .qs-wrapper .qs-options {
+    display: flex;
+    flex-direction: column;
+}
+
+#content .qs-wrapper .qs-option {
+    margin-top: 24px;
+}
+
+#content .qs-option__check {
+    margin-left: 24px;
+
+}
+
+/* Loại bỏ giao diện mặc định của nút radio */
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+}
+
+/* Tạo một hình tròn để thay thế nút radio */
+.qs-option__check {
+    margin-bottom: -4px;
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;   
+    border-radius: 50%;
+    border: 2px solid #ccc; /* Màu viền của nút radio */
+    display: inline-block;
+    position: relative;
+}
+
+/* Tạo màu nền cho nút radio khi được chọn */
+.qs-option__check:checked {
+    background-color: #007bff; /* Màu nền khi được chọn */
+}
+
+/* Tạo một đánh dấu (ví dụ: một dấu check) khi nút radio được chọn */
+.qs-option__check:after {
+    content: "";
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff; /* Màu của đánh dấu */
+}
+
+.qs-option__check:checked:after {
+    display: block;
+}
+
+/* Tạo hiệu ứng hover khi di chuột vào nút radio */
+.qs-option__check:hover {
+    border-color: #999; /* Màu viền khi di chuột vào */
+    cursor: pointer;
+}
+
+
+#content .qs-option__input {
+    padding: 8px;
+    width: 60%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.back-to-detail,
+#content .test-submit {
+    background-color: #0c89dc;
+    padding: 16px;
+    text-align: center;
+    background-image: linear-gradient(90deg, #00ADEF, #001C66);
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    transition: background-image 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+                transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+                box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 0.5;
+    color: #fff;
+    font-weight: 600;
+}
+
+.back-to-detail {
+    margin-top: 16px;
+    padding: 10px;
+}
+
+.back-to-detail a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.back-to-detail:hover,
+#content .test-submit:hover {
+    background-image: linear-gradient(-90deg, #00ADEF, #001C66);
+    cursor: pointer;
+    box-shadow: 0 6px 8px rgba(0,0,0,0.5);
+    transform: translate3d(0, -2px, 0); 
+}
+
+.qs-option {
+    display: flex;
+    align-items: center;
+}
+
+.qs-option__check {
+    margin-top:-5px;
+    margin-right: 15px; /* Điều chỉnh khoảng cách giữa radio button và input */
+}
+
+.choice{
+    margin-right:10px;
+}
+
+.back-to-quiz{
+    background-color: #0c89dc;
+    padding: 16px;
+    text-align: center;
+    background-image: linear-gradient(90deg, #00ADEF, #001C66);
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    transition: background-image 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+                transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+                box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 0.5;
+    color: #fff;
+    font-weight: 600;
+}
+.back-to-quiz:hover {
+    background-image: linear-gradient(-90deg, #00ADEF, #001C66);
+    cursor: pointer;
+    box-shadow: 0 6px 8px rgba(0,0,0,0.5);
+    transform: translate3d(0, -2px, 0); 
+}

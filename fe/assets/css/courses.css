@@ -1,0 +1,397 @@
+
+
+
+#content .content__search {
+    margin-bottom: 32px;
+    background-color: #fff;
+    font-size: 15px;
+    line-height: 40px;
+    border: 2px solid #e8e8e8;
+    border-radius: 20px;
+    height: 45px;
+    transition: border-color .2s ease-in-out;
+    color: #333;
+} 
+
+#content .content__search:focus-within {
+    border-color: #000;
+}
+
+#content .content__search .search__icon{
+    padding-left: 12px;
+}
+
+#content .content__search .search__input {
+    border: none;
+    caret-color: #444;
+    outline: none;
+    padding: 0 4px;
+}
+
+
+/* #content .content__courses {
+    /* height: auto; */
+/*} 
+
+<<<<<<< HEAD:fe/assets/css/courses.css
+/* Trong file CSS */
+#content .content__courses.grid-wide {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px; /* Khoảng cách giữa các phần tử */
+}
+
+
+/* #content .content__courses .courses-wrapper{
+=======
+#content .content__courses .courses-wrapper{
+>>>>>>> remotes/origin/master:assets/css/courses.css
+    /* height: 1000px; */
+
+/* }
+
+#content .content__courses .courses-row { */
+    /* display: block; */
+    /* height: 1000px; */
+    /* background-color: #fff; */
+
+/* } */
+
+#content .content__courses .course-each {
+    height: 600px;
+    display: block;
+    background-color: #fff;
+    border-radius: 20px;
+    margin-bottom: 28px;
+    position: relative;
+}
+
+
+#content .course-each .course-img:hover {
+    opacity: 0.6;
+}
+
+#content .course-each .course-img img {
+    border-radius: 20px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+#content .course-each .course-desc {
+    padding: 28px;
+    position: relative;
+}
+
+.course-each .course-desc .course-name {
+    font-size: 24px;
+    font-weight: 600;
+    padding-bottom: 16px;
+}
+
+.course-each .course-name a {
+    color: #002792;
+    text-decoration: none;
+}
+
+
+.course-each .course-name a:hover {
+    color: #0c89dc;
+    cursor: pointer;
+}
+
+
+.course-each .course-desc .course-info {
+    position: absolute;
+    top: 100px;
+    color: #6B7385;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 500;
+}
+
+.course-each .course-desc .course-info i {
+    width: 25px;
+    color: #0c89dc;
+}
+
+.course-info .text-highlight {
+    color: #000;
+    font-weight: 550;
+}
+
+
+#content .course-each .course-enter-btn {
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    bottom: 30px;
+    background-image: linear-gradient(90deg, #00ADEF, #001C66);
+    width: 80%;
+    min-height: 80px;
+    /* max-height: 100px; */
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    text-shadow: 2px 2px #000;
+    transition: background-image 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+                transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+                box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 0.5;
+}
+
+.course-each .course-enter-btn a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 80px;
+    text-decoration: none;
+    position: absolute;
+    top: 0;right: 0;bottom: 0;left: 0;
+}
+
+#content .course-each .course-enter-btn:hover {
+    background-image: linear-gradient(-90deg, #00ADEF, #001C66);
+    cursor: pointer;
+    box-shadow: 0 6px 8px rgba(0,0,0,0.5);
+    transform: translate3d(0, -2px, 0);
+}
+
+.course-enter-btn:hover .btn-text {
+    transition: transform 0.5s;
+    transform: translateX(10px);
+}
+
+#content .content__edit {
+    margin: 32px auto;
+    height: 300px;
+    border-radius: 25px;
+    border: 2px solid #002792; /* Thay ridge thành solid và chỉ định màu border */
+    background-image: linear-gradient(90deg, #c4d2fd, #f0cff5);
+    text-align: center;
+    line-height: 80px;
+    color: #000;
+    text-shadow: 2px 2px #ccc;
+    opacity: 0.8;
+    font-size: 30px;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Thêm box-shadow cho hiệu ứng bóng đổ */
+    transition: all 0.3s ease; /* Thêm transition cho hiệu ứng mượt mà */
+}
+
+#content .content__edit:hover {
+    transform: translateY(-10px); /* Thêm hiệu ứng nâng cao khi hover */
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15); /* Thay đổi box-shadow khi hover */
+    background-image: linear-gradient(-90deg, #c4d2fd, #f0cff5);
+}
+
+#content .content__edit .edit-heading {
+    margin: 16px 0;
+}
+
+.content__edit .edit-course {
+    height: 130px;
+    line-height: 130px;
+    background-color: #fff;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    color: #002792;
+}
+
+.content__edit a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+
+.content__edit .edit-course:hover {
+    background-image: linear-gradient(-90deg, #fff, #8abee0 );
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* CSS cho modal */
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000; /* Đảm bảo modal hiển thị trên các phần tử khác */
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-container {
+    background-color: #fff;
+    width: 900px;
+    max-width: calc(100% - 32px);
+    min-height: 200px;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: modalFadeIn ease 0.5s;
+    border-radius: 10px;
+}
+
+.modal.open{
+    display: flex;
+}
+
+.modal-header {
+    background-color: #0c89dc;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+    letter-spacing: 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.modal-graduate {
+    margin-right: 14px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    padding: 12px;
+    border-top-right-radius: 10px;
+}
+
+.modal-close:hover{
+    cursor: pointer;
+    background-color: #ccc;
+    color: #000;
+}
+
+.modal-body {
+    padding: 16px;
+}
+
+.modal-label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.modal-input {
+    border: 1px solid #ccc;
+    width: 97%;
+    font-size: 15px;
+    padding: 11px;
+    margin-bottom: 24px;
+}
+
+.modal #submit-btn {
+    display: block;
+    width: 40%;
+    margin: 16px auto 8px;
+    font-weight: 530;
+    color: #fff;
+    text-transform: uppercase;
+    background-image: linear-gradient(90deg, #00ADEF, #001C66);
+    padding: 18px;
+    /* max-height: 100px; */
+    text-align: center;
+    border-radius: 20px;
+    transition: background-image 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+                transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+                box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.modal #submit-btn:hover{
+    cursor: pointer;
+    background-color: #0c89dc;
+    background-image: linear-gradient(-90deg, #00ADEF, #001C66);
+    cursor: pointer;
+    box-shadow: 0 6px 8px rgba(0,0,0,0.5);
+    transform: translate3d(0, -2px, 0);
+}
+
+.modal-footer {
+    text-align: right;
+    padding: 20px 20px 34px 20px;
+}
+
+.modal-footer a {
+    color: #2196F3;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* CSS cho nút "Xóa môn học này" */
+.delete-course-btn {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-course-btn:hover {
+    background-color: #c82333;
+}
+
+/* CSS cho nút "Thoát" */
+.exit-delete-mode-btn {
+    background-color: #6c757d;
+    color: #fff;
+    padding: 16px 132px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 auto;
+}
+
+.exit-delete-mode-btn:hover {
+    background-color: #5a6268;
+}
+
+
+/* Kiểu cho nút xóa */
+.delete-course {
+    background-color: #e74840; /* Màu nền */
+    color: #fff; /* Màu chữ */
+    padding: 16px 32px; /* Kích thước góc bo trái và phải */
+    border: none; /* Không viền */
+    border-radius: 4px; /* Góc bo */
+    cursor: pointer; /* Con trỏ khi di chuột */
+    font-size: 14px; /* Kích thước chữ */
+    position: absolute;
+    bottom: 40px;
+    right: 40px;left: 40px;
+}
+
+/* Kiểu cho nút xóa khi di chuột qua */
+.delete-course:hover {
+    background-color: #e60000; /* Màu nền khi di chuột qua */
+}

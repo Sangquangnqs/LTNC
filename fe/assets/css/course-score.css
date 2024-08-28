@@ -1,0 +1,89 @@
+
+
+#content .content__map {
+    height: 48px;
+    background-color: #ddd;
+    margin-top: 16px;
+    margin-bottom: 32px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 48px;
+}
+
+#content .content__map a {
+    color: #002792;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+#content .course-on,
+#content .score-on,
+#content .classlist-on
+{
+    background-color: #8abee0;  
+}
+
+
+#content .content__map:hover {
+    background-color: #8abee0;
+    cursor: pointer;
+}
+
+
+/* CSS for course_score page */
+
+#content .student-name {
+    color: #002792;
+    margin-top: 16px;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.student-score-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 32px;
+}
+
+.student-score-table th, .student-score-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.student-score-table th {
+    background-color: #f2f2f2;
+}
+
+.student-score-table tfoot td {
+    font-weight: bold;
+}
+
+
+#content .pbar-heading {
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: 450;
+    font-style: italic;
+    color: #002792;
+}
+
+.progress-bar {
+    background-color: #ddd;
+    height:24px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 28px;
+}
+
+.progress {
+    background-color: #8abee0;
+    height: 100%;
+    line-height: 24px;
+    color: #fff;
+    text-align: center;
+}
+
+

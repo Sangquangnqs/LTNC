@@ -1,0 +1,213 @@
+body{
+    height: 100vh;
+    padding: 30px;
+}
+.container{
+    height: 100%;
+    width: 100%;
+    background: #e5efff;
+    /* margin: 30px auto; */
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 30px;
+}
+.decoration{
+    /* margin-top: 30px; */
+    /* height: 90%; */
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* background: red;    */
+}
+.login{
+    /* margin: 30px; */
+    /* height: 100%; */
+    width: 40%;
+    display: flex;
+    align-items: center;
+    /* background-color: red; */
+}
+.decoration__img{
+    height: 60%;
+    width: 100%;
+    /* padding: ; */
+    /* margin: 60px 25px; */
+    /* padding-left: 10px; */
+}
+.decoration__heading{
+    /* margin-top: 30px; */
+    text-align: center;
+    color: #0071f9;
+    font-size: 50px;
+}
+.login__option{
+    /* margin-top: 40px ; */
+    /* position: absolute; */
+    height: 80%;
+    width: 100%;
+    background: white;
+    border-radius: 30px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* margin: auto ; */
+}
+.login__logo{
+    /* height: 100%; */
+    width: 7%;
+    margin-right: 10px;
+}
+.option-logo{
+    /* padding-top: 40px; */
+    /* margin-top: 10px; */
+    display: flex;
+    justify-content: center;
+}
+
+.option-logo a {
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: bold;
+    color: black;
+}
+
+.option-logo a:hover {
+    opacity: 0.5;
+}
+
+.login-btn {
+
+}
+
+.login-teacher{
+    /* border: 0.5px solid black ; */
+    border-radius: 15px;
+    height: 80px;
+    /* padding: 0 30px; */
+    width: 75%;
+    margin: 20px auto 0;
+    background-color: #0071f9;
+    color: white;
+}
+.login-student{
+    height: 80px;
+    width: 75%;
+    margin: 10px auto 0;
+    border: 0.5px solid #0071f9;
+    color: #0071f9;
+    border-radius: 15px;
+}
+.login-note{
+    /* padding: 0 20px; */
+    line-height: 80px;
+    text-align: center;
+}
+.login-student:hover{
+    background-color: #e1effe;
+    cursor: pointer;
+}
+.login-teacher:hover{
+    background-color: #1a56db;
+    cursor: pointer;
+}
+
+
+
+
+
+.login__option-student{
+    height: 80%;
+    background: white;
+    /* margin: 40px 0px; */
+    padding: 40px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.input-box{
+    height: 13%;
+    width: 85%;
+    border-radius: 15px;
+    margin: 10px 40px 0px;
+    border: 0.5px solid grey;
+}
+.input-box::placeholder{
+    /* font-size:larger; */
+    opacity: .5;
+}
+.input-box[type=text]{
+    padding-left: 20px;
+    font-size:large;
+    font-weight:lighter;
+}
+.input-box[type=email]{
+    padding-left: 20px;
+    font-size:large;
+    font-weight:lighter;
+}
+.input-box[type=password]{
+    padding-left: 20px;
+    font-size:large;
+    font-weight:lighter;
+}
+.input-note{
+    margin: 20px 40px 0px;
+}
+h2>i:hover{
+    cursor: pointer;
+}
+.login-button{
+    margin: 20px auto;
+    /* padding-top: 18px; */
+    border-radius: 15px;
+    background-color: #0071f9;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    width: 85%; 
+    color: white;
+    font-weight: bold;
+    font-size: large;  
+}
+.login-button:hover{
+    opacity: .7;
+    cursor: pointer;
+}
+.forgotPassword{
+    text-align: center; 
+    /* margin-top: 20px; */
+    color: #0071f9;
+}
+.forgotPassword:hover{
+    cursor: pointer;
+    opacity: .7;
+}
+
+
+
+
+.login__option-teacher{
+    height: 80%;
+    background: white;
+    margin: 40px 0px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 40px;
+
+}
+
+.sign_up{
+    background-color: white;
+    padding: 40px;
+    height: 80%;
+    width: 100%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}

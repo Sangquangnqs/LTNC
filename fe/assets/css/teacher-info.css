@@ -1,0 +1,156 @@
+
+
+.header-info{
+    position: relative;
+    top: 150px;
+    /* display: flex;
+    justify-content: center; */
+    background-color: var(--themeColor);
+    padding: 30px 20px;
+    width: 400px;
+    margin: auto;
+    text-align: center;
+    border-radius: 40px;
+}
+.display-content{
+    position: relative;
+    top: 200px;
+    display: flex;
+    /* padding: 0px; */
+    height: 700px;
+    justify-content: space-evenly;
+    margin-bottom: 300px;
+}
+.display-info{
+    height: 100%;
+    width: 50%;
+    border-right: 1px black solid;
+}
+.display-info__avt{
+    display: flex;
+    margin: 0 auto;
+    width: 90%;
+    height: 20%;
+    border: 1px black solid;
+    justify-content: space-between;
+    /* border-radius: 40px; */
+
+}
+.display-info__inf{
+    margin: 10px auto;
+    width: 90%;
+    height: 80%;
+    border: 1px black solid;
+    /* border-radius: 40px; */
+}
+.info-name{
+    flex: 2;
+    display: flex;
+}
+.info-full{
+    display: flex;
+    height: 10%;
+}
+.info-full__content{
+    padding-left: 10px;
+    flex: 1;
+    font-weight: bold;
+    display: flex;
+}
+.info-full__content1{
+    flex: 2;
+}
+.info-full__nghiencuu{
+    height: 22%;
+}
+.nghiencuu-title{
+    height: 10%;
+    font-weight: bolder;
+    display: flex;
+}
+.display-list{
+    height: 100%;
+    width: 40%;
+    padding: 20px 0 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+.display-list__item{
+    height: 20%;
+    width: 40%;
+    border: .5px grey solid;
+    box-shadow:0cqi;
+    margin: 10px;
+    border-radius: 30px;
+    display: flex;
+    opacity: 0.4;
+}
+.item-name{
+    width: 50%;
+    margin: auto;
+    /* float: left; */
+}
+.display-list__item:hover{
+    opacity: 1;
+    background-color: var(--themeColor);
+    cursor: pointer;
+    /* border-color: red; */
+}
+.ava_vananh{
+    flex: 1;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-clip: content-box;
+    margin: 10px;
+    background-image: url('/assets/img/ava_thayco/Ava_Thanh.png');
+}
+.ava_nobody {
+    flex: 1;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-clip: content-box;
+    margin: 10px;
+    background-image: url('/assets/img/HCMUT_official_logo.png');
+
+}
+.ava_vanquy{
+    flex: 1;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-clip: content-box;
+    margin: 10px;
+    background-image: url('/assets/img/ava_thayco/ava-vanquy.png');
+}
+.item-ava-nobody {
+    height: 80%;
+    width: 45%;
+    background-size: contain;
+    margin: auto;
+    background-image: url(/assets/img/teacher/nonavatar.jpg);
+    background-repeat: no-repeat;
+
+}
+.item-ava_vananh{
+    height: 80%;
+    width: 45%;
+    background-size: contain;
+    margin: auto;
+    background-image: url(/assets/img/ava_thayco/Ava_Thanh.png);
+    background-repeat: no-repeat;
+}
+.item-ava_vanquy{
+    background-repeat: no-repeat;
+    height: 80%;
+    width: 45%;
+    background-size: contain;
+    margin: auto;
+    background-image: url(/assets/img/ava_thayco/ava-vanquy.png);
+}
+.active{
+    opacity: 1;
+    background-color: var(--themeColor);
+}
+
+
+/* footer */

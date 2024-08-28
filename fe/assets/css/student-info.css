@@ -1,0 +1,258 @@
+body{
+    background-color: whitesmoke;
+}
+.option{
+    /* margin: 5px 0px; */
+    position: relative;
+    top: 80px;
+    background-color: white;
+    display: flex;
+    height: 60px;
+    justify-content: space-evenly;
+}
+.option_detail{
+    width: 12%;
+    opacity: 0.3;
+}
+.option_detail-info{
+    /* padding: 0 30px; */
+    margin: 20px auto; 
+    text-align: center;  
+    position: relative;
+}
+.active{
+    opacity: 1;
+}
+.active::before{
+    content:'';
+    background-color: #002792;
+    height: 5px;
+    width: 12%;
+    position: absolute;
+    top: 100%;
+}
+.main-color{
+    color: #002792;
+}
+.option_detail:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.option_detail:hover i{
+    color: #002792;
+}
+.detail-info{
+    position: relative;
+    width: 80%;
+    height: 700px;
+    top: 140px;
+    background-color: white;
+    margin: auto;
+    margin-bottom: 200px;
+}
+.detail-info-header{
+    height: 15%;
+}
+.detail-info-body{
+    height: 70%;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+.detail-info-footer{
+    height: 15%;
+    position: relative;
+}
+.detail-info-item{
+    height: 20%;
+    width: 50%;
+    padding: 40px 60px;
+    position: relative;
+}
+
+.detail-info-item p:first-child{
+    color: var(--secondColor);
+}
+.detail-info-item::after{
+    content: '';
+    height: 0.5px;
+    background-color: black;
+    width: 50%;
+    position: absolute;
+    top: 100%;
+}
+.detail-info-item > p{
+    line-height: 30px;
+}
+
+.detail-info-footer > div{
+    height: 50%;
+    width: 12%;
+    padding:17px 20px;
+    border-radius: 20px;
+    background-color: var(--themeColor);
+    text-align: center;
+    position: absolute;
+    right: 80px;
+    bottom: 24px;
+    font-weight: bold;
+}
+.detail-info-footer>div:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+.student-info{
+    width: 100%;
+    height: 100%;
+}
+div>h1>i{
+    margin-right: 10px;
+}
+.info-body-header{
+    display: flex;
+    height: 15%;
+    justify-content: space-evenly;
+    background-color: var(--themeColor);
+}
+.info-body-content{
+    margin-top: 10px;
+    display: flex;
+    height: 12%;
+    justify-content: space-evenly;
+}
+.info-body-content>div{
+    flex: 1;
+    /* margin-right: 5px; */
+    /* height: 100%; */
+    text-align: center;
+    /* padding-top: 20px; */
+    border: 0.5px solid;
+    line-height: 70px;
+}
+.info-body-content :first-child
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.info-body-content>div>p{
+    line-height: 18px;
+}
+.info-body-header>div{
+    font-size: large;
+    font-weight: bold;
+    flex: 1;
+    text-align: center;
+    line-height: 80px;
+    border: 0.5px solid;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* overflow: auto; */
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 50px;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin:0px auto;
+    /* padding: 60px 40px 20px; */
+    border: 1px solid #888;
+    width: 80%;
+    height: 100%;
+    border-radius: 20px;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+}
+
+.close {
+    /* color: var(--themeC; */
+    opacity: .2;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.close:hover,
+.close:focus {
+    /* color: black; */
+    opacity: 1;
+    text-decoration: none;
+    cursor: pointer;
+}
+#editForm{
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 60px 20px 20px;
+}
+#saveButton{
+    height: 10%;
+    width: 10%;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    /* background-color: var(--themeColor); */
+    /* border: none; */
+}
+#saveButton:hover{
+    cursor: pointer;
+    opacity: .5;
+}
+.editForm__item{
+    width: 40%;
+}
+#editForm>div>input{
+    width: 100%;
+    height: 40%;
+    border-radius: 10px;
+}
+#editForm>div>input[type="text"]
+{
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+#editForm>div>input[type="date"]
+{
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+.gender__select {
+    background-color: white;
+    border: 2px solid blue;
+    border-radius: 10px;
+    font-family: sans-serif;
+    width: 100%;
+    height: 40%;
+    font-size: 16px;
+    padding-left: 20px;
+  }
+  
+  .gender__item {
+    position: absolute;
+    background-color: white;
+    padding: 10%;
+    color: blue;
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+  
+  .gender__item:hover,.gender__item.active {
+    background-color: lightblue;
+  }
+  
