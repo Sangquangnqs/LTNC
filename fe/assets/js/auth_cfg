@@ -1,0 +1,78 @@
+let authtoken;
+let teacher_only = document.getElementsByClassName("teacher-only");
+let student_only = document.getElementsByClassName("student-only");
+document.addEventListener('DOMContentLoaded', () => {
+    authtoken = localStorage.getItem('Authorization');
+    if (authtoken === null) {
+        let auth_only = document.getElementsByClassName('auth-only');
+        for (let i = 0; i < auth_only.length; i++) {
+            auth_only[i].style.display = 'none';
+        }
+        localStorage.clear();
+        if (window.location.pathname === '/'){
+            document.getElementById('login').innerHTML = "Đăng nhập";
+        }
+        else
+          window.location.href = '/';
+    } else {
+        validate();
+        setInterval(() => {
+            validate();
+        }, 3000000);
+    }
+    
+    if (localStorage.getItem('Role') !== 'STUDENT') {
+        for (let i = 0; i < student_only.length; i++) {
+            student_only[i].style.display = 'none';
+        }
+    }
+    if (localStorage.getItem('Role') !== 'TEACHER') {
+        for (let i = 0; i < teacher_only.length; i++) {
+            teacher_only[i].style.display = 'none';
+        }
+    }
+});
+function logout() {
+    fetch('http://localhost:8080/logout', {
+        method: 'POST',
+        mode: 'cors',
+        headers: {
+            'Authorization': authtoken
+        }
+    }).finally(
+        () => {
+            localStorage.clear();
+            window.location.href = '/login.html';
+        }
+    )
+}
+
+function validate() {
+    fetch('http://localhost:8080/validate', {
+        method: 'POST',
+        mode: 'cors',
+        headers: {
+            'Authorization': authtoken
+        }
+    }).then(
+        res => {
+            if (!res.ok) throw Error(res.statusText);
+            return res.headers.get('Authorization');
+        }
+    ).then(
+        data => {
+            localStorage.setItem('Authorization', data);
+            authtoken = localStorage.getItem('Authorization');
+            document.getElementById('change-password').innerHTML = "Đổi mật khẩu";
+            let logoutElement = document.getElementById('logout');
+            logoutElement.innerHTML = "Đăng xuất";
+            logoutElement.addEventListener('click', logout);
+        }
+    ).catch(
+        err => {
+            localStorage.clear();
+            window.location.href = '/';
+            () => console.clear()
+        }
+    )
+}
