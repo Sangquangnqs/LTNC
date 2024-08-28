@@ -1,0 +1,220 @@
+.flex {
+    display: flex;
+}
+
+#content .content__map {
+    height: 48px;
+    background-color: #ddd;
+    margin-top: 16px;
+    margin-bottom: 32px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 48px;
+}
+
+#content .content__map a {
+    color: #002792;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+#content .course-on,
+#content .score-on,
+#content .classlist-on
+{
+    background-color: #8abee0;  
+}
+
+
+#content .content__map:hover {
+    background-color: #8abee0;
+    cursor: pointer;
+}
+
+#content__toggle {
+    color: #002792;
+    font-size: 16px;
+    font-weight: 450;
+    font-style: italic; 
+    border-radius: 8px;
+    width: 150px;
+    margin: 0 auto;
+    cursor: pointer;
+    margin-top: 16px;
+    margin-bottom: 48px;
+    text-decoration: underline  ;
+}
+
+#content__toggle:hover {
+    color: #8abee0;
+}
+
+#content .content__section {
+    margin-bottom: 40px;;
+    max-height: 1000px; 
+    transition: max-height 0.3s ease;
+    border-bottom: 1px solid #ccc; /* Đường gạch dưới */
+    padding-bottom: 20px;
+}
+
+#content .section__heading {
+    font-weight: 500;
+    margin-bottom: 24px;
+    color: #002792;
+}
+
+#content .section__heading:hover {
+    color: #8abee0;
+    cursor: pointer;
+}
+
+
+#content .section__list {
+    margin-left: 48px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #454545;
+}
+
+#content .noti-list p{
+    color: #454545;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+#content .overview-img img {
+    width: 100%;
+
+}
+
+#content .section__list .overview-wrapper {
+    margin-bottom: 24px;
+}
+
+li {
+    list-style-type: none;
+}
+
+#content .section__list ul ul {
+    margin-left: 20px; /* Độ thụt vào mong muốn, có thể thay đổi */
+}
+
+#content .content__section.collapsed {
+    max-height: 0; /* Thu gọn nội dung khi section collapsed */
+    border-bottom: none;
+}
+
+#content .collapsed .section__list {
+    visibility: hidden;
+}
+
+#content .file-container.collapsed {
+    display: none;
+}
+/* Ẩn các file trong section khi được thu gọn */
+.content__section.collapsed .file-container {
+    display: none;
+}
+
+.expanded {
+    max-height: none !important;
+}
+
+
+
+/* Tùy chỉnh phần tử div chứa tên file */
+#content .section__list .file-container {
+    width: 100%; /* Khối file chiếm toàn bộ chiều rộng */
+    background-color: #fff; /* Màu nền */
+    padding: 10px; /* Khoảng cách nội dung với biên */
+    margin-bottom: 10px; /* Khoảng cách giữa các file */
+    border-radius: 5px; /* Bo tròn góc */
+    border: 1px solid #0c89dc; 
+    position: relative;
+}
+
+#content .section__list .file-container:hover {
+    border: 1px solid #002792; 
+}
+
+/* Tùy chỉnh liên kết mở file */
+#content .section__list .file-container a {
+    color: #0c89dc; /* Màu của liên kết */
+    text-decoration: underline; /* Loại bỏ gạch chân */
+    transition: color 0.3s; /* Hiệu ứng khi di chuột qua */
+    font-weight: 400;
+}
+
+#content .section__list .file-container a:hover {
+    color: #002792; /* Màu của liên kết khi di chuột qua */
+}
+
+/* Tùy chỉnh nút "Chọn file" */
+#content .section__list .fileUpload {
+    margin-bottom: 32px; /* Khoảng cách giữa nút "Chọn file" và các file */
+    padding: 5px 10px; /* Padding cho nút */
+    border: 1px solid #ced4da; /* Đường viền */
+    border-radius: 5px; /* Bo tròn góc */
+    background-color: #8abee0; /* Màu nền */
+    color: #fff; /* Màu chữ */
+    cursor: pointer; /* Con trỏ khi di chuột */
+    transition: background-color 0.3s; /* Hiệu ứng khi hover */
+}
+
+input#file-upload-button {
+    background-color: #f3d3f3;
+}
+
+#content .section__list .fileUpload:hover {
+    background-color: #0056b3; /* Màu nền khi hover */
+}
+
+#content .section__list .file-icon {
+    margin-right: 10px; /* Khoảng cách giữa icon và tên file */
+}
+
+#content .section__list .delete-button {
+    position: absolute;
+    right: 10px;
+}
+
+#content .confirm-container {
+    margin-top: 10px; 
+    text-align: center; 
+}
+
+#content .confirm-button {
+    padding: 8px 12px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    background-color: #0c89dc; 
+    transition: background-color 0.3s;
+}
+
+
+#content .confirm-button:hover {
+    cursor: pointer;
+    background-color: #0056b3; 
+}
+
+
+#content .section__list .quiz-name {
+    padding: 24px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.section__list .quiz-name a {
+    color: #002792;
+    padding: 24px 12px;
+}
+
+#content .section__list .quiz-name:hover a{
+    opacity: 0.5;
+    cursor: pointer;
+}
