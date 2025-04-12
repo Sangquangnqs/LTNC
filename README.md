@@ -1,4 +1,12 @@
-# Project LMS
+# **Academic Learning Management System - Hệ thống quản lý học thuật - LMS**
+<p align ='center'> Developed by Team ILOVEHUST - LTNC- HK232</p> 
+
+# <p align = 'center'>**This repository is not the main source code (temporary)**</p>
+
+## 🚀**Source code:**
+The source code of the software can be accessed via the following link:
+
+🔗 [Academic Management System](https://github.com/NguyenVu04/BTL.git)
 
 ## Description
 
@@ -26,11 +34,11 @@ cd BTL/backend
 ### Contributors
 1. Võ Quang Đại Việt - 2213954
 2. Nguyễn Đình Đức - 2210794
-3. Nguyễn Duy Vũ - 2213997
-4. Trần Huy Đức - 2210812
-5. Chế Minh Đức - 2210783
-6. Khúc Minh Trí - 2213636
-7. Nguyễn Quang Sáng - 2212922
+3. Nguyễn Quang Sáng - 2212922
+4. Nguyễn Duy Vũ - 2213997
+5. Trần Huy Đức - 2210812
+6. Chế Minh Đức - 2210783
+7. Khúc Minh Trí - 2213636
 
 ### Video
 https://youtu.be/HpA0xAE15ZE?si=Bu4EhRuMUR9bwU4F
